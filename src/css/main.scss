@@ -1,0 +1,381 @@
+/**
+ * Project: Project name 
+ * File:    Main SCSS
+ */
+
+
+@import 'modules/grid';
+@import 'modules/article';
+@import 'modules/fonts';
+@import 'modules/furniture';
+
+.guInteractive {
+	font-family:"Guardian Egyptian Web", Arial;
+	-webkit-font-smoothing:antialiased;
+	*{
+		box-sizing:border-box;
+	}
+	#chapters{
+		padding-bottom:40px;
+	}
+	.chapter{
+		padding-top:30px;
+	}
+
+	.chapterHeading{
+		border-top: 1px solid #dfdfdf;
+		padding-top:10px;
+		font-size:24px;
+		margin-top:0;
+		margin-bottom:1em;
+		color:#fff;
+		font-weight:500;
+		line-height: 1.1em;
+	}
+	p{
+		line-height:1.3em;
+	}
+
+	.externalLink{
+		color:#005689;
+		font-weight:500;
+		text-decoration: none;
+		padding-left:50px;
+		position: relative;
+		min-height:40px;
+		display:inline-block;
+		vertical-align: middle;
+		margin:20px 0;
+		&:before{	
+			width:40px;
+			height:40px;
+			background-color:#005689;
+			background-image:url(@@assetPath@@/imgs/arrow.svg);
+			background-repeat:no-repeat;
+			background-position:center;
+			background-size:50%;
+			border-radius:20px;
+			display:block;
+			content:'';
+			position: absolute;
+			left:0;
+			top:-10px;
+		}
+		&:hover{
+			text-decoration: underline;
+			color:#00456E;
+			&:before{
+				background-color:#00456E;
+			}
+		}
+	}
+
+	#petition{
+		// background-image: url('@@assetPath@@/imgs/header.jpg');
+		background-color:#888;
+		background-size:cover;
+		background-position:center;
+		position: relative;
+		height:auto;
+		color:#fff;
+		padding-bottom:20px;
+		h1{
+			font-size:14px;
+			letter-spacing: 2px;
+			font-weight:500;
+			margin-bottom:5px;
+		}
+		h2{
+			font-size:38px;
+			font-weight:bold;
+			margin-top:0;
+			margin-bottom:0.5em;
+		}
+
+		#standfirst{
+			font-weight:500;
+			line-height:1.3em;
+			font-size:18px;
+			text-shadow:0 1px 1px rgba(0,0,0,0.2);
+			position: relative;
+			&:after{
+				content:'“';
+				position: absolute;
+				left:-8px;
+				top:0;
+			}
+		}
+		#petitionForm{
+			margin:30px 0 50px;
+		}
+		#formContainer{
+			height:40px;
+			width:100%;
+			background:#fff;
+		}
+		#petitionDisclaimer{
+			font-size:12px;
+			font-family:'Guardian Text Sans Web';
+			line-height:1.2em;
+			opacity:0.8;
+			margin-top:5px;
+		}
+		#petitionMeta{
+			font-size:12px;
+			font-family:'Guardian Text Sans Web';
+			line-height:1.3em;
+			#illustrationCredit{
+				float:left;
+				padding-right:20px;
+				margin:0;
+			}
+			#shareContainer{
+				height:40px;
+				background:#999;
+				float:left;
+			}
+			&:after{
+				clear:both;
+				content:'';
+				display: block;
+			}
+		}
+		&:before{
+			position: absolute;
+			left:0;
+			right:0;
+			top:0;
+			bottom:0;
+			background:rgba(0,0,0,0.5);
+			content:'';
+			z-index:2;
+		}
+		.wrapper{
+			z-index:5;
+			position: relative;
+		}
+	}
+
+	#note{
+		background:#CED7CD;
+		color:#fff;
+		.chapterHeading{
+			border-color:#fff;
+		}
+		#noteContents{
+			p{
+				font-size:16px;
+			}
+			#pictureAlan{
+				float:right;
+				padding-left:20px;
+			}
+		}
+	}
+
+	#explainer{
+		.chapterHeading{
+			color:#333;
+		}
+		#explainerVideoContainer{
+			background-image: url(@@assetPath@@/imgs/header.jpg);
+			background-size:cover;
+			height:0;
+			padding-bottom:60%;
+		}
+		#allFaqQuestions{
+			display:none;
+		}
+	}
+
+	#quoteContainer{
+		margin-top:50px;
+		border-top:1px solid #dfdfdf;
+		quote{
+			font-size:24px;
+			line-height:1.2em;
+			display:inline-block;
+			position: relative;
+			margin: 0 10px;
+			&:before{
+				content:'“';
+				position: absolute;
+				left:-10px;
+			}
+		}
+	}
+	.quoteCredit{
+		font-family: "Guardian Text Sans Web";
+		margin:0 0 10px;
+		padding-top:10px;
+		text-transform:uppercase;
+		font-size:14px;
+		color:#767676;
+		font-weight:normal;
+	}
+
+	#faqContainer{
+		margin-top:50px;
+	}
+
+	#action{
+		.chapterHeading{
+			color:#333;
+		}
+		.actionContainer{
+			height:auto;
+			width:100%;
+			padding: 1px 0 40px;
+		}
+		.actionContents{
+			border-top:1px solid #eee;
+			margin: 40px 0 0;
+			padding-top:10px;
+			h4{
+				color:#fff;
+				margin-top:0;
+				font-size:28px;
+			}
+			.actionSubtitle{
+				color:#fff;
+				font-family:'Guardian Text Sans Web';
+				text-transform: uppercase;
+				font-size:14px;
+				display: inline-block;
+				margin-bottom:10px;
+			}
+			.actionParagraph{
+				color:#fff;
+			}
+			button{
+				background:transparent;
+				border:1px solid #eee;
+				height:34px;
+				padding:0 15px;
+				font-family:'Guardian Text Sans Web';
+				border-radius:17px;
+				color:#eee;
+				font-size:14px;
+				font-weight:bold;
+				outline:none;
+			}
+			.actionNote{
+				color:#fff;
+				font-size:24px;
+				border-top:1px solid;
+				margin-top:40px;
+				font-weight:100;
+				padding-top:20px;
+				p{
+					margin:0;
+				}
+			}
+		}
+	}
+	#updates{
+		.chapterHeading{
+			color:#333;
+		}
+		#updateExternal{
+			margin-bottom:40px;
+		}
+		.moreInfo{
+			font-family:'Guardian Text Sans Web';
+			color:#767676;
+			line-height:1.3em;
+			font-size:14px;
+		}
+		ul{
+			padding-left:15px;
+		}
+		li.moreInfo{
+			margin-bottom:10px;
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+@media(min-width:740px){
+	.guInteractive{
+		.chapterHeading{
+			font-size:28px;
+		}
+		#petition{
+			h2{
+				font-size:54px;
+			}
+			#standfirst{
+				line-height:1.5em;
+			}
+		}
+		#quoteContainer{
+			.quoteCredit{
+				float:left;
+				margin:0;
+			}
+			quote{
+				float:left;
+				margin:0;
+				padding-top:10px;
+				font-size:28px;
+			}
+			&:after{
+				clear:both;
+				display: block;
+				content:'';
+			}
+		}
+		#faqContainer{
+			border-top:1px solid #dfdfdf;
+			#faqQuestions:after{
+				content:'';
+				clear:both;
+				display:block;
+			}
+			.chapterHeading{
+				border:none;
+			}
+			#flaggedQuestion{
+				float:left;
+				padding-right:20px;
+			}
+			#allFaqQuestions{
+				float:right;
+				display:block;
+			}
+			.faqQuestion{
+				padding-left:20%;
+				color:#005689;
+				font-weight:500;
+				cursor:pointer;
+				&:hover{
+					text-decoration: underline;
+					color:#00456E;
+				}
+				&.flagged{
+					text-decoration:underline;
+					color:#00456E;
+					cursor:default;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+@media(min-width:980px){
+	#pictureAlan{
+		margin-left:0;
+		float:left;
+	}
+}

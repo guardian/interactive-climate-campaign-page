@@ -1,0 +1,32 @@
+<section class="chapter" id="explainer">
+	<div class="wrapper">
+		<h2 class="chapterHeading l-col-7">Title of video explainer</h2>
+		<div id="explainerVideoContainer" class="l-col-7"></div>
+		<div id="quoteContainer" class="l-col-7">
+			{{#with quote[0]}}
+				<h4 class="quoteCredit m-col-2">{{credit}}</h4>
+				<quote class="m-col-3">{{text}}”</quote>
+			{{/with}}
+		</div>
+		<div id="faqContainer" class="l-col-7">
+			<div id="faqQuestions">
+				{{#each faq}}
+					{{#if flag}}
+						<div id="flaggedQuestion" class="m-col-3">
+							<h2 class="chapterHeading ">{{headline}}</h2>
+							{{#each text}}
+								<p>{{{.}}}</p>
+							{{/each}}
+						</div>
+					{{/if}}
+				{{/each}}
+				<div id="allFaqQuestions" class="m-col-2">
+					{{#each faq}}
+						<p class="faqQuestion {{#flag}}flagged{{/flag}}" on-tap="flagQuestion:{{this}}">{{{headline}}}</p>
+					{{/each}}
+				</div>
+			</div>
+			<a href="#" class="externalLink">Read the ful FAQ</a>
+		</div>
+	</div>
+</section>

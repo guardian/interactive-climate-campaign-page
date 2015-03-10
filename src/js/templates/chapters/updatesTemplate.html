@@ -1,0 +1,31 @@
+<section class="chapter" id="updates">
+	<div class="wrapper">
+		<div class="m-col-4 l-col-7">
+			<h2 class="chapterHeading ">Campaign updates</h2>
+			<div id="updateArticles">
+				{{#updates}}
+					<div class="articleBlock">
+						<div class="articleContainer">
+							<div class="articleImage">
+								<img src="http://lorempixel.com/300/200" />
+							</div>
+							<div class="articleText">
+								<p>{{headline}}</p>
+							</div>
+						</div>
+					</div>
+				{{/updates}}
+			</div>
+			<a href="#" class="externalLink" id="updateExternal">More updates on the campaign blog</a>
+			<h2 class="chapterHeading">More information</h2>
+			<p class="moreInfo">{{info[0].text}}</p>
+			<ul>
+			{{#info:i}}
+				{{#if i>0}}
+				<li class="moreInfo">{{text}}</li>
+				{{/if}}
+			{{/info}}
+			</ul>
+		</div>
+	</div>
+</section>

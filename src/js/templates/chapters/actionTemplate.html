@@ -1,0 +1,27 @@
+<section class="chapter" id="action">
+		<div class="wrapper">
+		<h2 class="chapterHeading l-col-7">Take further action</h2>
+		</div>
+		{{#each actions}}
+			<div class="actionContainer" style="background-color:{{img}}">
+				<div class="wrapper">
+					<div class="m-col-4 l-col-7">
+						<div class="actionContents">
+							{{#headline.subtitle}}
+								<span class="actionSubtitle">{{{headline.subtitle}}}</span>
+							{{/headline.subtitle}}
+							<h4>{{headline.title}}</h4>
+							<p class="actionParagraph">{{{text[0]}}}</p>
+							<button>Read more</button>
+							{{#note}}
+								<div class="actionNote">
+									<p>{{{note}}}</p>
+								</div>
+							{{/note}}
+						</div>
+					</div>
+				</div>
+			</div>
+		{{/each}}
+	</div>
+</section>

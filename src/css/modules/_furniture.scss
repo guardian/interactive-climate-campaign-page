@@ -1,0 +1,90 @@
+#backtohome{
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  vertical-align:top;
+}
+#backtohome span{
+  display:inline-block;
+  padding-top:17px;
+}
+#guardianNav{
+  height:48px;
+  background:#296d96;
+  width:100%;
+}
+.contentBlock{
+  margin:0 10px;
+  max-width:1300px;
+}
+
+#navContainer{
+  background:#005689;
+  height:100%;
+}
+
+#navContainer:after{
+  clear:both;
+  content:'';
+  display:block;
+}
+
+#guardianLogo{
+  width:170px;
+  float:right;
+  margin-top:10px;
+  display:inline-block;
+}
+
+#homeLogo{
+  width:15px;
+  height:18px;
+  margin-top:14px;
+  display:inline-block;
+  margin-right:7px;
+  vertical-align:top;
+}
+
+footer{
+  background:#424242; 
+  padding-top:20px;
+}
+.really-serious-copyright{
+  font-size: 12px;
+  color:#dcdcdc;
+  font-family:'Guardian Text Sans Web','Agate Sans',sans-serif;
+  margin:0 0 20px;
+  padding-top:10px;
+}
+#footerContent{
+  padding-bottom:1px;
+  .colophon{
+    column-count:2;
+    padding:0;
+    margin:0;
+    li{
+      padding:0;
+      margin:0;
+    }
+  }
+  a{
+    color:gainsboro;
+    text-decoration:none;
+    padding-bottom:12px;
+    font-size:14px;
+    line-height:22px;
+    font-weight:500;
+    display:inline-block;
+    &:hover{
+      text-decoration:underline;
+    }
+  }
+}
+
+@media(min-width:740px){
+  #footerContent{
+    .colophon{
+      column-count:3;
+    }
+  }
+}
