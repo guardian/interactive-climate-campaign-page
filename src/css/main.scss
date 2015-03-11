@@ -106,7 +106,7 @@
 			}
 		}
 		#petitionForm{
-			margin:30px 0 50px;
+			margin:30px 0 80px;
 		}
 		#formContainer{
 			height:40px;
@@ -131,7 +131,7 @@
 			}
 			#shareContainer{
 				height:40px;
-				background:#999;
+				// background:#999;
 				float:left;
 			}
 			&:after{
@@ -322,7 +322,7 @@
 				margin:0;
 			}
 			quote{
-				float:left;
+				float:right;
 				margin:0;
 				padding-top:10px;
 				font-size:28px;
@@ -356,14 +356,27 @@
 				color:#005689;
 				font-weight:500;
 				cursor:pointer;
+				span{
+					padding:5px;
+					display:inline-block;
+				}
 				&:hover{
-					text-decoration: underline;
-					color:#00456E;
+					span{
+						text-decoration: underline;
+						color:#00456E;
+					}
 				}
 				&.flagged{
-					text-decoration:underline;
-					color:#00456E;
 					cursor:default;
+					span{
+						background:#eee;
+					}
+					&:hover{
+						span{
+							color:#005689;
+							text-decoration: none;
+						}
+					}
 				}
 			}
 		}
@@ -374,8 +387,61 @@
 
 
 @media(min-width:980px){
+.guInteractive{
+	.chapter{
+		padding-top:70px;
+		padding-bottom:70px;
+	}
+	.chapterHeading{
+		padding-top:20px;
+		margin-bottom:30px;
+	}
+	#petition{
+		h2{
+			font-size:64px;
+		}
+		#standfirst{
+			font-size:20px;
+		}
+	}
 	#pictureAlan{
 		margin-left:0;
 		float:left;
+	}
+	.chapterHeading{
+		font-size:34px;
+	}
+	#note #noteContents p{
+		font-size:18px;
+	}
+	#action{
+		padding-bottom:0;
+		.actionContents{
+			border:none;
+			h4{
+				font-size:38px;
+				margin-bottom:0.5em;
+			}
+		}
+	}
+	.actionLine{
+		border-top:1px solid #fff;
+		padding-bottom:16px;
+	}
+}
+}
+
+@media(min-width:1300px){
+	.guInteractive{
+		#quoteContainer{
+			quote{
+				font-size:48px;
+				font-weight:100;
+				padding-top:5px;
+				&:before{
+					left:-15px;
+				}
+			}
+		}
 	}
 }

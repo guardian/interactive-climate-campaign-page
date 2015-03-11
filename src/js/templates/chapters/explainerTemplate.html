@@ -4,8 +4,8 @@
 		<div id="explainerVideoContainer" class="l-col-7"></div>
 		<div id="quoteContainer" class="l-col-7">
 			{{#with quote[0]}}
-				<h4 class="quoteCredit m-col-2">{{credit}}</h4>
-				<quote class="m-col-3">{{text}}”</quote>
+				<h4 class="quoteCredit m-col-2 l-col-1">{{credit}}</h4>
+				<quote class="m-col-3 l-col-7">{{text}}”</quote>
 			{{/with}}
 		</div>
 		<div id="faqContainer" class="l-col-7">
@@ -22,7 +22,7 @@
 				{{/each}}
 				<div id="allFaqQuestions" class="m-col-2">
 					{{#each faq}}
-						<p class="faqQuestion {{#flag}}flagged{{/flag}}" on-tap="flagQuestion:{{this}}">{{{headline}}}</p>
+						<p class="faqQuestion {{#flag}}flagged{{/flag}}" on-tap="flagQuestion:{{this}}"><span>{{{headline}}}</span></p>
 					{{/each}}
 				</div>
 			</div>
