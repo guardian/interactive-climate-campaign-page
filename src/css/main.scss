@@ -8,6 +8,7 @@
 @import 'modules/article';
 @import 'modules/fonts';
 @import 'modules/furniture';
+@import 'modules/share';
 
 .guInteractive {
 	font-family:"Guardian Egyptian Web", Arial;
@@ -16,7 +17,7 @@
 		box-sizing:border-box;
 	}
 	#chapters{
-		padding-bottom:40px;
+		padding-bottom:0;
 	}
 	.chapter{
 		padding-top:30px;
@@ -99,7 +100,7 @@
 			text-shadow:0 1px 1px rgba(0,0,0,0.2);
 			position: relative;
 			&:after{
-				content:'“';
+				content:'\0022';
 				position: absolute;
 				left:-8px;
 				top:0;
@@ -131,8 +132,10 @@
 			}
 			#shareContainer{
 				height:40px;
-				// background:#999;
 				float:left;
+				.shareButtons{
+					text-align: right;
+				}
 			}
 			&:after{
 				clear:both;
@@ -178,10 +181,15 @@
 			color:#333;
 		}
 		#explainerVideoContainer{
-			background-image: url(@@assetPath@@/imgs/header.jpg);
-			background-size:cover;
+		}
+		#videoHolder{
+			width:100%;
 			height:0;
-			padding-bottom:60%;
+			padding-bottom:56.25%;
+			position: relative;
+			iframe{
+				position: absolute;
+			}
 		}
 		#allFaqQuestions{
 			display:none;
@@ -198,9 +206,15 @@
 			position: relative;
 			margin: 0 10px;
 			&:before{
-				content:'“';
+				content:'\0022';
 				position: absolute;
 				left:-10px;
+			}
+		}
+		#quoteShare{
+			float:right;
+			.shareButtons{
+				margin-top:20px;
 			}
 		}
 	}
@@ -247,7 +261,7 @@
 			.actionParagraph{
 				color:#fff;
 			}
-			button{
+			button.readmore{
 				background:transparent;
 				border:1px solid #eee;
 				height:34px;
@@ -258,6 +272,9 @@
 				font-size:14px;
 				font-weight:bold;
 				outline:none;
+			}
+			.shareButtons{
+				display:inline-block;
 			}
 			.actionNote{
 				color:#fff;
@@ -290,6 +307,14 @@
 		}
 		li.moreInfo{
 			margin-bottom:10px;
+		}
+	}
+	#ticker{
+		width:100%;
+		height:400px;
+		position: relative;
+		iframe{
+			position:absolute;
 		}
 	}
 

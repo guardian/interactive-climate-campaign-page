@@ -1,12 +1,20 @@
 <section class="chapter" id="explainer">
 	<div class="wrapper">
 		<h2 class="chapterHeading l-col-7">Title of video explainer</h2>
-		<div id="explainerVideoContainer" class="l-col-7"></div>
+		<div id="explainerVideoContainer" class="l-col-7">
+			<div id="videoHolder">
+				<iframe src="http://embed.theguardian.com/embed/video/lifeandstyle/video/2015/feb/11/watch-me-date-andy-flo-video" scrolling="no" frameborder="none" height="100%" width="100%"></iframe>
+			</div>
+		</div>
 		<div id="quoteContainer" class="l-col-7">
 			{{#with quote[0]}}
 				<h4 class="quoteCredit m-col-2 l-col-1">{{credit}}</h4>
 				<quote class="m-col-3 l-col-7">{{text}}”</quote>
+				<div id="quoteShare" class="m-col-3 l-col-7">
+					<shareContainer media="['twitter','facebook']" message="{{text}}" />
+				</div>
 			{{/with}}
+
 		</div>
 		<div id="faqContainer" class="l-col-7">
 			<div id="faqQuestions">
@@ -21,8 +29,10 @@
 					{{/if}}
 				{{/each}}
 				<div id="allFaqQuestions" class="m-col-2">
-					{{#each faq}}
+					{{#each faq:i}}
+						{{#if i<6}}
 						<p class="faqQuestion {{#flag}}flagged{{/flag}}" on-tap="flagQuestion:{{this}}"><span>{{{headline}}}</span></p>
+						{{/if}}
 					{{/each}}
 				</div>
 			</div>
