@@ -1,17 +1,20 @@
 {{#with petition[0]}}
 	<section class="chapter" id="petition">
 		<div class="wrapper">
-			<div class="m-col-4">
-				<h1 class="l-col-5">KEEP IT IN THE GROUND</h1>
-				<h2 class="l-col-5">{{headline}}</h2>
-				<p id="standfirst" class="l-col-5">{{text}}”</p>
-				<div id="petitionForm" class="l-col-5">
-					<div id="formContainer"></div>
+			<h1 class="indent">KEEP IT IN THE GROUND</h1>
+			<h2 class="indent">{{headline}}</h2>
+			<div id="infoForm" class="indent">
+				<div id="standfirst" class="m-col-large l-col-large">
+					<p>{{text}}</p>
 					<p id="petitionDisclaimer">{{note}}</p>
+					<shareContainer media="['facebook','twitter','mail']"/>
 				</div>
-				<div id="petitionMeta" class="l-col-7">
-					<p id="illustrationCredit" class="s-col-2">ANILINE DYE, 1996-2003, by Antony Gormley</p>
-					<div id="shareContainer" class="s-col-3"><shareContainer media='["facebook","twitter","mail"]' message="sharing the whole page" /></div>
+				
+				<div id="petitionForm">
+					<div id="formContainer"></div>
+				</div>
+				<div id="petitionMeta">
+					<p id="illustrationCredit">ANILINE DYE, 1996-2003, by Antony Gormley</p>
 				</div>
 			</div>
 		</div>

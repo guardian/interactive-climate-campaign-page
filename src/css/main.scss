@@ -72,8 +72,7 @@
 	}
 
 	#petition{
-		// background-image: url('@@assetPath@@/imgs/header.jpg');
-		background-color:#888;
+		background:#A7B5A5;
 		background-size:cover;
 		background-position:center;
 		position: relative;
@@ -92,27 +91,26 @@
 			margin-top:0;
 			margin-bottom:0.5em;
 		}
-
+		#infoForm{
+			position: relative;
+		}
 		#standfirst{
-			font-weight:500;
+			font-weight:400;
 			line-height:1.3em;
-			font-size:18px;
-			text-shadow:0 1px 1px rgba(0,0,0,0.2);
+			font-size:16px;
+			// text-shadow:0 1px 1px rgba(0,0,0,0.2);
 			position: relative;
 			&:after{
-				content:'\0022';
-				position: absolute;
-				left:-8px;
-				top:0;
+				// content:'\0022';
+				// position: absolute;
+				// left:-8px;
+				// top:0;
 			}
 		}
-		#petitionForm{
-			margin:30px 0 80px;
-		}
 		#formContainer{
-			height:40px;
+			height:180px;
 			width:100%;
-			background:#fff;
+			background:rgba(255,255,255,0.2);
 		}
 		#petitionDisclaimer{
 			font-size:12px;
@@ -120,11 +118,13 @@
 			line-height:1.2em;
 			opacity:0.8;
 			margin-top:5px;
+			margin-bottom:20px;
 		}
 		#petitionMeta{
 			font-size:12px;
 			font-family:'Guardian Text Sans Web';
 			line-height:1.3em;
+			margin-top:40px;
 			#illustrationCredit{
 				float:left;
 				padding-right:20px;
@@ -144,14 +144,14 @@
 			}
 		}
 		&:before{
-			position: absolute;
-			left:0;
-			right:0;
-			top:0;
-			bottom:0;
-			background:rgba(0,0,0,0.5);
-			content:'';
-			z-index:2;
+			// position: absolute;
+			// left:0;
+			// right:0;
+			// top:0;
+			// bottom:0;
+			// background:rgba(0,0,0,0.5);
+			// content:'';
+			// z-index:2;
 		}
 		.wrapper{
 			z-index:5;
@@ -160,10 +160,8 @@
 	}
 
 	#note{
-		background:#CED7CD;
-		color:#fff;
 		.chapterHeading{
-			border-color:#fff;
+			color:#333;
 		}
 		#noteContents{
 			p{
@@ -199,12 +197,15 @@
 	#quoteContainer{
 		margin-top:50px;
 		border-top:1px solid #dfdfdf;
+		overflow:hidden;
+		position: relative;
 		quote{
 			font-size:24px;
 			line-height:1.2em;
 			display:inline-block;
 			position: relative;
 			margin: 0 10px;
+			font-weight:100;
 			&:before{
 				content:'\0022';
 				position: absolute;
@@ -212,7 +213,7 @@
 			}
 		}
 		#quoteShare{
-			float:right;
+			
 			.shareButtons{
 				margin-top:20px;
 			}
@@ -324,7 +325,13 @@
 
 
 
-
+@media(min-width:480px){
+	.guInteractive{
+		#petition #standfirst{
+			font-size:20px;
+		}
+	}
+}
 
 
 
@@ -341,6 +348,12 @@
 				line-height:1.5em;
 			}
 		}
+		#petitionForm{
+			position: absolute;
+			top:0;
+			right:0;
+			width:220px;
+		}
 		#quoteContainer{
 			.quoteCredit{
 				float:left;
@@ -356,6 +369,9 @@
 				clear:both;
 				display: block;
 				content:'';
+			}
+			#quoteShare{
+				float:right;
 			}
 		}
 		#faqContainer{
@@ -405,6 +421,11 @@
 				}
 			}
 		}
+
+		#pictureAlan{
+			width:240px;
+		}
+
 	}
 }
 
@@ -456,6 +477,36 @@
 }
 }
 
+@media(min-width:1140px){
+	.guInteractive{
+		#petitionForm{
+			width:260px;
+		}
+		#pictureAlan{
+			width:300px;
+		}
+		#quoteContainer{
+			quote{
+				float:left;
+				width:auto;
+				font-size:48px;
+				&:before{
+					left:140px;
+				}
+			}
+			#quoteShare{
+				float:left;
+			}
+		}
+		.quoteCredit{
+			width:140px;
+			position: absolute;
+			left:0;
+			top:0;
+		}
+	}
+}
+
 @media(min-width:1300px){
 	.guInteractive{
 		#quoteContainer{
@@ -464,9 +515,15 @@
 				font-weight:100;
 				padding-top:5px;
 				&:before{
-					left:-15px;
+					left:220px;
 				}
 			}
+		}
+		#petitionForm{
+			width:320px;
+		}
+		#pictureAlan{
+			width:340px;
 		}
 	}
 }
