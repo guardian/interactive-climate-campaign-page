@@ -2,7 +2,7 @@
 	<div class="wrapper">
 		<h2 class="chapterHeading">Title of video explainer</h2>
 		<div class="chapterContent">
-			<div id="explainerVideoContainer">
+			<div id="explainerVideoContainer" class="m-col-large">
 				<div id="videoHolder">
 					<iframe src="http://embed.theguardian.com/embed/video/lifeandstyle/video/2015/feb/11/watch-me-date-andy-flo-video" scrolling="no" frameborder="none" height="100%" width="100%"></iframe>
 				</div>
@@ -45,10 +45,8 @@
 				</div>
 				<div class="m-col-large">
 					<div id="allFaqQuestions">
-						{{#each faq:i}}
-							{{#if i<6}}
+						{{#each faq}}
 							<p class="faqQuestion {{#flag}}flagged{{/flag}}" on-tap="flagQuestion:{{this}}"><span>{{{headline}}}</span></p>
-							{{/if}}
 						{{/each}}
 					</div>
 				</div>

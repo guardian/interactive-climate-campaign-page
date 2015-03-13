@@ -13,11 +13,24 @@ body{
 	
 }
 .guInteractive {
-
+	color:#333;
 	font-family:"Guardian Egyptian Web", Arial;
 	-webkit-font-smoothing:antialiased;
 	*{
 		box-sizing:border-box;
+	}
+	#appHeader{
+		overflow:hidden;
+	}
+	#headerImage{
+		width:100%;
+	}
+	#appHeadline{
+		margin-top:0;
+		margin-bottom:20px;
+		font-size:38px;
+		font-weight:100;
+		padding-bottom:0;
 	}
 	#chapters{
 		padding-bottom:40px;
@@ -81,27 +94,16 @@ body{
 			}
 		}
 	}
-	#headerImage{
-		width:100%;
 
-	}
 
 	#petition{
 		background-size:cover;
 		background-position:center;
 		position: relative;
 		height:auto;
-		// color:#fff;
-		// padding-bottom:20px;
-		h1{
-			font-size:48px;
-			margin-bottom:0.2em;
-		}
-		h2{
-			// font-size:38px;
-			// font-weight:bold;
-			// margin-top:0;
-			// margin-bottom:0.5em;
+		.chapterHeading{
+			color:#D8A265;
+			margin-bottom:0;
 		}
 		#infoForm{
 			position: relative;
@@ -110,13 +112,9 @@ body{
 			font-weight:400;
 			line-height:1.3em;
 			font-size:16px;
-			// text-shadow:0 1px 1px rgba(0,0,0,0.2);
 			position: relative;
-			&:after{
-				// content:'\0022';
-				// position: absolute;
-				// left:-8px;
-				// top:0;
+			p:first-child{
+				margin-top:0.4em;
 			}
 		}
 		#formContainer{
@@ -162,7 +160,7 @@ body{
 	}
 
 	#note{
-		background:#F2C17B;
+		background:#D8A265;
 		color:#fff;
 		.wrapper{
 			background:transparent;
@@ -337,6 +335,9 @@ body{
 			width:220px;
 			margin-left:10px;
 		}
+		#appHeadline{
+			font-size:56px;
+		}
 	}
 }
 @media(min-width:660px){
@@ -364,6 +365,9 @@ body{
 			width:220px;
 			margin-top:10px;
 		}
+		#appHeadline{
+			font-size:74px;
+		}
 		#petition{
 			h2{
 				// font-size:54px;
@@ -379,31 +383,21 @@ body{
 			width:220px;
 		}
 		#quoteContainer{
-			// .quoteCredit{
-			// 	position: absolute;
-			// 	left:0;
-			// 	top:0;
-			// 	width:140px;
-			// 	margin:0;
-			// 	font-size:16px;
-			// 	line-height: 1.3em;
-			// }
-			quote{
-				// padding-left:240px;
 				margin:0;
-				// padding-top:10px;
-				font-size:28px;
-				// &:before{
-				// 	left:230px;
-				// }
+			quote{
+				margin:0;
+				font-size:34px;
+			}
+			.quoteCredit{
+				margin:0;
+			}
+			#quoteShare{
+				margin:0;
 			}
 			&:after{
 				clear:both;
 				display: block;
 				content:'';
-			}
-			#quoteShare{
-				padding-left:240px;
 			}
 		}
 		#faqContainer{
@@ -506,9 +500,6 @@ body{
 	#quoteContainer{
 		quote{
 			font-size:48px;
-			&:before{
-				left:220px;
-			}
 		}
 	}
 	#flaggedQuestion p{
@@ -530,14 +521,17 @@ body{
 			line-height:1.2em;
 		}
 		.chapterContent{
-			padding-left:180px;
+			padding-left:160px;
 			padding-top:15px;
 		}
 		.externalLink{
 			top:15px;
 		}
+		#appHeadline{
+			padding-left:180px;
+		}
 		
-		#standfirst,.paragraphs{
+		#petition #standfirst,.paragraphs{
 			p:first-child{
 				margin-top:0;
 			}
@@ -547,28 +541,19 @@ body{
 		}
 		#quoteContainer{
 			quote{
-				float:left;
-				width:auto;
-				font-size:48px;
 				&:before{
-					left:140px;
+					left:-20px;
 				}
 			}
-			#quoteShare{
-				float:left;
-			}
-		}
-		.quoteCredit{
-			width:140px;
-			position: absolute;
-			left:0;
-			top:0;
 		}
 	}
 }
 
 @media(min-width:1300px){
 	.guInteractive{
+		#appHeadline{
+			padding-left:260px;
+		}
 		.chapterHeading{
 			width:220px;
 			font-size:28px;
@@ -582,9 +567,7 @@ body{
 				font-size:48px;
 				font-weight:100;
 				padding-top:5px;
-				&:before{
-					left:220px;
-				}
+
 			}
 		}
 		#petitionForm{
