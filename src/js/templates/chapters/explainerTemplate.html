@@ -1,42 +1,59 @@
 <section class="chapter" id="explainer">
 	<div class="wrapper">
-		<h2 class="chapterHeading indent">Title of video explainer</h2>
-		<div id="explainerVideoContainer" class="indent">
-			<div id="videoHolder">
-				<iframe src="http://embed.theguardian.com/embed/video/lifeandstyle/video/2015/feb/11/watch-me-date-andy-flo-video" scrolling="no" frameborder="none" height="100%" width="100%"></iframe>
+		<h2 class="chapterHeading">Title of video explainer</h2>
+		<div class="chapterContent">
+			<div id="explainerVideoContainer">
+				<div id="videoHolder">
+					<iframe src="http://embed.theguardian.com/embed/video/lifeandstyle/video/2015/feb/11/watch-me-date-andy-flo-video" scrolling="no" frameborder="none" height="100%" width="100%"></iframe>
+				</div>
 			</div>
 		</div>
-		<div id="quoteContainer">
-			{{#with quote[0]}}
-				<h4 class="quoteCredit m-col-2 l-col-1">{{credit}}</h4>
-				<quote class="m-col-3 indent">{{text}}”</quote>
-				<div id="quoteShare" class="m-col-3 indent">
-					<shareContainer media="['twitter','facebook']" message="{{text}}" />
-				</div>
-			{{/with}}
-
+	</div>
+</section>
+<section class="chapter" id="quote">
+	<div class="wrapper">
+		<h2 class="chapterHeading">Some quotes</h2>
+		<div class="chapterContent">
+			<div id="quoteContainer">
+				{{#with quote[0]}}
+					<quote>{{text}}”</quote>
+					<h4 class="quoteCredit">{{credit}}</h4>
+					<div id="quoteShare">
+						<shareContainer media="['twitter','facebook']" message="{{text}}" />
+					</div>
+				{{/with}}
+			</div>
 		</div>
-		<div id="faqContainer" class="indent">
-			<div id="faqQuestions">
-				{{#each faq}}
-					{{#if flag}}
-						<div id="flaggedQuestion" class="m-col-3">
-							<h2 class="chapterHeading ">{{headline}}</h2>
-							{{#each text}}
-								<p>{{{.}}}</p>
-							{{/each}}
-						</div>
-					{{/if}}
-				{{/each}}
-				<div id="allFaqQuestions" class="m-col-2">
-					{{#each faq:i}}
-						{{#if i<6}}
-						<p class="faqQuestion {{#flag}}flagged{{/flag}}" on-tap="flagQuestion:{{this}}"><span>{{{headline}}}</span></p>
+	</div>
+</section>
+<section class="chapter" id="faq">
+	<div class="wrapper">
+		<h2 class="chapterHeading">FAQ</h2>
+		<div class="chapterContent">
+			<div id="faqContainer">
+				<div id="faqQuestions">
+					{{#each faq}}
+						{{#if flag}}
+							<div id="flaggedQuestion" class="m-col-large">
+								<h2>{{headline}}</h2>
+								{{#each text}}
+									<p>{{{.}}}</p>
+								{{/each}}
+							</div>
 						{{/if}}
 					{{/each}}
 				</div>
+				<div class="m-col-large">
+					<div id="allFaqQuestions">
+						{{#each faq:i}}
+							{{#if i<6}}
+							<p class="faqQuestion {{#flag}}flagged{{/flag}}" on-tap="flagQuestion:{{this}}"><span>{{{headline}}}</span></p>
+							{{/if}}
+						{{/each}}
+					</div>
+				</div>
+				<!-- <a href="#" class="externalLink">Read the ful FAQ</a> -->
 			</div>
-			<a href="#" class="externalLink">Read the ful FAQ</a>
 		</div>
 	</div>
 </section>

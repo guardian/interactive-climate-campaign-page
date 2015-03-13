@@ -1,17 +1,16 @@
 {{#with note[0]}}
 	<section class="chapter" id="note">
 		<div class="wrapper">
-			<h2 class="chapterHeading indent">{{headline}}</h2>
-			<div class="paragraphs indent" id="noteContents">
-				<img id="pictureAlan" src="@@assetPath@@/imgs/alan.jpg" />
-				<div class="m-col-large l-col-large">
-				{{#text}}
-					<p>{{{.}}}</p>
-				{{/text}}
+			<h2 class="chapterHeading">{{headline}}</h2>
+			<div class="chapterContent">
+				<!-- <img id="pictureAlan" src="@@assetPath@@/imgs/alan.jpg" /> -->
+				<div class="paragraphs m-col-large l-col-medium" id="noteContents">
+					{{#text}}
+						<p>{{{.}}}</p>
+					{{/text}}
 				</div>
-			</div>
-			<div class="indent">
-			<a href="#" class="externalLink">Read the full story</a>
+				
+				<a href="#" class="externalLink">Read the full story</a>
 			</div>
 		</div>
 	</section>

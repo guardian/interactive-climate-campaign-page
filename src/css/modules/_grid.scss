@@ -1,27 +1,21 @@
 .element-interactive.interactive,body{
 	margin:0;
 }
-
 .wrapper{
-	padding:0 10px;
+	margin:0 10px;
 	max-width:680px;
+	position: relative;
+	border-top: 1px solid #dfdfdf;
 }
 #navContainer{
 	padding:0 10px;
 }
-#testContainer{
-	background:red;
-	height:200px;
-}
-.s-col-2{
-	width:40%;
-}
-.s-col-3{
-	width:60%;
-}
 
 @media(min-width:480px){
-	.wrapper,#navContainer{
+	.wrapper{
+		margin:0 20px;
+	}
+	#navContainer{
 		padding:0 20px;
 	}
 }
@@ -43,36 +37,18 @@
 	.m-col-large{
 		padding-right:240px;
 	}
-	.m-col-1{
-		width:20%;
-	}
-	.m-col-2{
-		width:40%;
-	}
-	.m-col-3{
-		width:60%;
-	}
-	.m-col-4{
-		width:80%;
-		padding-right:20px;
-	}
 }
 
 @media(min-width:980px){
-	.indent{
-		// padding-left:120px;
-	}
-	.m-col-4{
-		width:auto;
-		padding-right:0;
-	}
 	.wrapper,#navContainer{
 		max-width:940px;
+	}
+	.l-col-medium{
+		padding-right:370px;
 	}
 	.l-col-large{
 		padding-right:240px;
 	}
-	
 }
 
 @media(min-width:1140px){
@@ -82,18 +58,9 @@
 	.l-col-large{
 		padding-right:300px;
 	}
-	.indent{
-		padding-left:160px
-	}
 }
 
 @media(min-width:1300px){
-	.indent{
-		padding-left:240px
-	}
-	.l-col-large{
-		padding-right:360px;
-	}
 	.wrapper,#navContainer{
 		max-width:1260px;
 	}
