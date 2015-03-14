@@ -118,7 +118,6 @@ body{
 			}
 		}
 		#formContainer{
-			height:180px;
 			width:100%;
 		}
 		#petitionDisclaimer{
@@ -176,9 +175,7 @@ body{
 		}
 	}
 	#pictureAlan{
-		float:right;
-		width:100%;
-		margin-bottom:10px;
+		display:none;
 	}
 	#faq{
 		#allFaqQuestions{
@@ -331,10 +328,6 @@ body{
 		#petition #standfirst{
 			font-size:20px;
 		}
-		#pictureAlan{
-			width:220px;
-			margin-left:10px;
-		}
 		#appHeadline{
 			font-size:56px;
 		}
@@ -382,6 +375,13 @@ body{
 			right:0;
 			width:220px;
 		}
+		#pictureAlan{
+			display: block;
+			position: absolute;
+			right:0;
+			bottom:0;
+			width:240px;
+		}
 		#quoteContainer{
 				margin:0;
 			quote{
@@ -419,7 +419,7 @@ body{
 				column-count:2;
 			}
 			.faqQuestion{
-				color:#005689;
+				color:#D8A265;
 				font-weight:500;
 				cursor:pointer;
 				margin:0 0 10px;
@@ -447,12 +447,6 @@ body{
 				}
 			}
 		}
-
-		#pictureAlan{
-			width:220px;
-			margin-left:10px;
-		}
-
 	}
 }
 
@@ -468,14 +462,11 @@ body{
 	#petition{
 		#standfirst{
 			font-size:20px;
+			padding-right:380px;
 		}
 	}
 	#petitionForm{
-		width:350px;
-	}
-	#pictureAlan{
-		margin-left:0;
-		width:350px;
+		width:360px;
 	}
 	.chapterHeading{
 		font-size:34px;
@@ -530,14 +521,20 @@ body{
 		#appHeadline{
 			padding-left:180px;
 		}
-		
+		#petition #standfirst{
+			padding-right:440px;
+		}
+		#petitionForm{
+			width:400px;
+		}
 		#petition #standfirst,.paragraphs{
 			p:first-child{
 				margin-top:0;
 			}
 		}
 		#pictureAlan{
-			width:350px;
+			width:220px;
+			left:0;
 		}
 		#quoteContainer{
 			quote{
@@ -570,11 +567,9 @@ body{
 
 			}
 		}
-		#petitionForm{
-			width:340px;
-		}
+		
 		#pictureAlan{
-			width:340px;
+			width:240px;
 		}
 	}
 }
