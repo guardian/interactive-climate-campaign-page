@@ -103,15 +103,15 @@ define([
                 return q;
             })
             e.context.flag="true";
-            console.log(data);
             app.update('faq');
+            var scrollHeight = $('#faq').offset().top;
+            window.scrollTo(0,scrollHeight);
         })
 
         app.on('shareContainer.share',shareContent)
     }
 
     function shareContent(e, platform, message, url, image){
-        console.log(platform)
         var shareWindow;
         var twitterBaseUrl = "http://twitter.com/share?text=";
         var facebookBaseUrl = "https://www.facebook.com/dialog/feed?display=popup&app_id=741666719251986&link=";

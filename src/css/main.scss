@@ -24,6 +24,27 @@ body{
 	}
 	#headerImage{
 		width:100%;
+		height:90px;
+		margin-bottom:60px;
+	}
+	#logoContainer{
+		top:0;
+		left:0;
+		width:100%;
+		position: absolute;
+		.wrapper{
+			background:transparent;
+		}
+	}
+	#appLogo{
+		width:78px;
+		height:115px;
+		background-image:url('@@assetPath@@/imgs/logo.png');
+		background-repeat:no-repeat;
+		background-size:100%;
+		top:10px;
+		right:0;
+		position: absolute !important;
 	}
 	#appHeadline{
 		margin-top:0;
@@ -41,6 +62,7 @@ body{
 	}
 	.chapter{
 		position: relative;
+		margin-top:20px;
 	}
 	.wrapper{
 		padding:0 0 30px;
@@ -99,10 +121,9 @@ body{
 
 
 	#petition{
-		background-size:cover;
-		background-position:center;
 		position: relative;
 		height:auto;
+		margin-top:0;
 		.chapterHeading{
 			color:#D8A265;
 			margin-bottom:0.4em;
@@ -132,28 +153,17 @@ body{
 			opacity:0.8;
 			margin-top:5px;
 			margin-bottom:20px;
+			color:#999;
 		}
-		#petitionMeta{
-			font-size:12px;
+		#petitionShare{
 			font-family:'Guardian Text Sans Web';
-			line-height:1.3em;
-			margin-top:40px;
-			#illustrationCredit{
+			font-size:12px;
+			font-weight: bold;
+			color:#333;
+			p{
+				width:165px;
 				float:left;
-				padding-right:20px;
-				margin:0;
-			}
-			#shareContainer{
-				height:40px;
-				float:left;
-				.shareButtons{
-					text-align: right;
-				}
-			}
-			&:after{
-				clear:both;
-				content:'';
-				display: block;
+				margin: 9px 10px 0 0;
 			}
 		}
 		.wrapper{
@@ -184,15 +194,63 @@ body{
 	}
 	#faq{
 		#allFaqQuestions{
-			display:none;
-			border-top:1px solid #dfdfdf;
-			margin-top:40px;
-			padding-top:10px;
+			margin-top:50px;
+		}
+		#faqContainer{
+			#faqQuestions:after{
+				content:'';
+				clear:both;
+				display:block;
+			}
+			.chapterHeading{
+				border:none;
+			}
+			#flaggedQuestion{
+				h2{
+					margin-top:0;
+				}
+			}
+			#allFaqQuestions{
+				overflow: hidden;
+			}
+			.faqQuestion{
+				color:#D8A265;
+				font-weight:bold;
+				cursor:pointer;
+				margin:0;
+				padding-bottom:20px;
+				border-top:1px solid #dfdfdf;
+				column-break-inside: avoid;
+				font-size:14px;
+				span{
+					padding:5px;
+					display:inline-block;
+				}
+				&:hover{
+					span{
+						text-decoration: underline;
+						color:#C28846;
+					}
+				}
+				&.flagged{
+					cursor:default;
+					background:#eee;
+					span{
+						
+					}
+					&:hover{
+						span{
+							color:#D8A265;
+							text-decoration: none;
+						}
+					}
+				}
+			}
 		}
 	}
 	#explainer{
 		.wrapper{
-			border:none;
+			// border:none;
 		}
 		#videoHolder{
 			width:100%;
@@ -218,7 +276,7 @@ body{
 			margin: 0 0 0 10px;
 			font-weight:100;
 			&:before{
-				content:'\0022';
+				content:'\201C';
 				position: absolute;
 				left:-10px;
 			}
@@ -235,6 +293,7 @@ body{
 		padding-top:10px;
 		font-size:18px;
 		font-weight:bold;
+		color:#D8A265;
 	}
 
 	#action{
@@ -346,12 +405,36 @@ body{
 			#standfirst{
 				font-size:20px;
 			}
+			#petitionShare{
+				p{
+					font-size:14px;
+					width:200px;
+				}
+			}
 		}
 		#appHeadline{
 			font-size:56px;
 		}
 		#appSubhead{
 			font-size:32px;
+		}
+		#headerImage{
+			height:auto;
+			margin-bottom:50px;
+		}
+		#appLogo{
+			width:98px;
+			height:150px;
+		}
+		#faq{
+			#faqContainer{
+				.faqQuestion{
+					font-size:16px;
+				}
+			}
+		}
+		#flaggedQuestion{
+			min-height:420px;
 		}
 	}
 }
@@ -360,6 +443,20 @@ body{
 		.wrapper{
 			padding:0 20px 30px;
 		}
+		#headerImage{
+			height:200px;
+			margin-bottom:0;
+			width:105%;
+		}
+		#appLogo{
+			width:88px;
+			height:140px;
+			right:20px;
+			background-image: url(@@assetPath@@/imgs/logo_white.png);
+		}
+		#flaggedQuestion{
+			min-height:320px;
+		}
 	}
 }
 
@@ -367,6 +464,9 @@ body{
 
 @media(min-width:740px){
 	.guInteractive{
+		#appLogo{
+			right:20px;
+		}
 		.wrapper{
 			padding:0 20px 30px;
 		}
@@ -385,7 +485,7 @@ body{
 			margin-bottom:0.1em;
 		}
 		#appSubhead{
-			font-size:40px;
+			font-size:36px;
 		}
 		#petition{
 			.chapterHeading{
@@ -408,6 +508,11 @@ body{
 			bottom:0;
 			width:240px;
 		}
+		#note{
+			#noteContents p{
+				font-size:18px;
+			}
+		}
 		#quoteContainer{
 				margin:0;
 			quote{
@@ -426,54 +531,10 @@ body{
 				content:'';
 			}
 		}
-		#faqContainer{
-			#faqQuestions:after{
-				content:'';
-				clear:both;
-				display:block;
-			}
-			.chapterHeading{
-				border:none;
-			}
-			#flaggedQuestion{
-				h2{
-					margin-top:0;
-				}
-			}
-			#allFaqQuestions{
-				display:block;
-				column-count:2;
-			}
-			.faqQuestion{
-				color:#D8A265;
-				font-weight:500;
-				cursor:pointer;
-				margin:0 0 10px;
-				column-break-inside: avoid;
-				span{
-					padding:5px;
-					display:inline-block;
-				}
-				&:hover{
-					span{
-						text-decoration: underline;
-						color:#C28846;
-					}
-				}
-				&.flagged{
-					cursor:default;
-					span{
-						background:#eee;
-					}
-					&:hover{
-						span{
-							color:#D8A265;
-							text-decoration: none;
-						}
-					}
-				}
-			}
+		#flaggedQuestion{
+			min-height:420px;
 		}
+		
 	}
 }
 
@@ -482,6 +543,12 @@ body{
 
 @media(min-width:980px){
 .guInteractive{
+	#headerImage{
+		height:auto;
+	}
+	#appLogo{
+		width:88px;
+	}
 	.chapterHeading{
 		padding-top:20px;
 		margin-bottom:30px;
@@ -500,6 +567,23 @@ body{
 	}
 	#note #noteContents p{
 		font-size:18px;
+	}
+	#faq{
+		#faqContainer{
+			.faqQuestion{
+				float:left;
+				padding:0;
+				width:49%;
+				margin-right:2%;
+				min-height:90px;
+				&:nth-of-type(2n+2){
+					margin-right:0;
+				}
+			}
+		}
+	}
+	#flaggedQuestion{
+		min-height:472px;
 	}
 	#action{
 		padding-bottom:0;
@@ -523,8 +607,11 @@ body{
 			}
 		}
 	}
+	.quoteCredit{
+		font-size:24px;
+	}
 	#flaggedQuestion p{
-		font-size:18px;
+		font-size:20px;
 		line-height:1.3em;
 	}
 }
@@ -532,6 +619,9 @@ body{
 
 @media(min-width:1140px){
 	.guInteractive{
+		#headerImage{
+			width:100%;
+		}
 		.chapterHeading{
 			width:140px;
 			position: absolute;
@@ -560,6 +650,7 @@ body{
 			.chapterHeading{
 				margin-top:0;
 				border:none;
+				padding-top:0;
 			}
 			#petitionContainer{
 				border-top:1px solid #dfdfdf;
@@ -581,15 +672,14 @@ body{
 			width:220px;
 			left:0;
 		}
-		#quoteContainer{
-			quote{
-			}
-		}
 	}
 }
 
 @media(min-width:1300px){
 	.guInteractive{
+		#appLogo{
+			width:98px;
+		}
 		#appHeadline{
 			padding-left:260px;
 		}
@@ -609,13 +699,15 @@ body{
 			quote{
 				font-size:48px;
 				font-weight:100;
-				padding-top:5px;
+				padding-top:0;
 
 			}
 		}
-		
 		#pictureAlan{
 			width:240px;
+		}
+		#flaggedQuestion{
+			min-height:410px;
 		}
 	}
 }

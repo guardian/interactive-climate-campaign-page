@@ -15,7 +15,7 @@
 		<h2 class="chapterHeading">What they say</h2>
 		<div class="chapterContent">
 			<div id="quoteContainer" class="m-col-large">
-				{{#with quote[0]}}
+				{{#with quote[Math.floor(Math.random()*quote.length)]}}
 					<quote>{{text}}”</quote>
 					<h4 class="quoteCredit">{{credit}}</h4>
 					<div id="quoteShare">

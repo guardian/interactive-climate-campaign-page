@@ -16,15 +16,23 @@
         &.share-facebook{
             background-color:#3067a3;
             background-image: url(../imgs/facebook.svg);
-
+            &:hover{
+                background-color:#1B497B;
+            }
         }
         &.share-twitter{
             background-color:#03b3ee;
             background-image: url(../imgs/twitter.svg);
+            &:hover{
+                background-color:#129FCE;
+            }
         }
         &.share-mail{
             background-color:#767676;
             background-image: url(../imgs/mail.svg);
+            &:hover{
+                background-color:#555;
+            }
         }
     }
 }
