@@ -27,18 +27,20 @@ body{
 	}
 	#appHeadline{
 		margin-top:0;
-		margin-bottom:20px;
+		margin-bottom:0.2em;
 		font-size:38px;
 		font-weight:100;
 		padding-bottom:0;
+	}
+	#appSubhead{
+		font-size:24px;
+		line-height:1.1em;
 	}
 	#chapters{
 		padding-bottom:40px;
 	}
 	.chapter{
-		// padding-top:30px;
 		position: relative;
-		// padding-bottom:30px;
 	}
 	.wrapper{
 		padding:0 0 30px;
@@ -51,7 +53,7 @@ body{
 		margin-top:0;
 		margin-bottom:1em;
 		color:#333;
-		font-weight:500;
+		font-weight:bold;
 		line-height: 1.1em;
 	}
 	.chapterContent{
@@ -103,7 +105,10 @@ body{
 		height:auto;
 		.chapterHeading{
 			color:#D8A265;
-			margin-bottom:0;
+			margin-bottom:0.4em;
+			margin-top:10px;
+			padding-top:5px;
+			border-top:1px solid #dfdfdf;
 		}
 		#infoForm{
 			position: relative;
@@ -159,7 +164,7 @@ body{
 	}
 
 	#note{
-		background:#D8A265;
+		background:#C8C5C2;
 		color:#fff;
 		.wrapper{
 			background:transparent;
@@ -186,7 +191,8 @@ body{
 		}
 	}
 	#explainer{
-		#explainerVideoContainer{
+		.wrapper{
+			border:none;
 		}
 		#videoHolder{
 			width:100%;
@@ -306,6 +312,14 @@ body{
 		width:100%;
 		height:400px;
 		position: relative;
+		overflow: hidden;
+		#iframeContainer{
+			position: absolute;
+			left:0;
+			top:0;
+			bottom:-15px;
+			right:-15px;
+		}
 		iframe{
 			position:absolute;
 		}
@@ -325,11 +339,19 @@ body{
 
 @media(min-width:480px){
 	.guInteractive{
-		#petition #standfirst{
-			font-size:20px;
+		#petition{
+			.chapterHeading{
+				margin-top:20px;
+			}
+			#standfirst{
+				font-size:20px;
+			}
 		}
 		#appHeadline{
 			font-size:56px;
+		}
+		#appSubhead{
+			font-size:32px;
 		}
 	}
 }
@@ -339,7 +361,7 @@ body{
 			padding:0 20px 30px;
 		}
 	}
-	}
+}
 
 
 
@@ -360,10 +382,14 @@ body{
 		}
 		#appHeadline{
 			font-size:74px;
+			margin-bottom:0.1em;
+		}
+		#appSubhead{
+			font-size:40px;
 		}
 		#petition{
-			h2{
-				// font-size:54px;
+			.chapterHeading{
+				margin-top:40px;
 			}
 			#standfirst{
 				line-height:1.5em;
@@ -423,6 +449,7 @@ body{
 				font-weight:500;
 				cursor:pointer;
 				margin:0 0 10px;
+				column-break-inside: avoid;
 				span{
 					padding:5px;
 					display:inline-block;
@@ -430,7 +457,7 @@ body{
 				&:hover{
 					span{
 						text-decoration: underline;
-						color:#00456E;
+						color:#C28846;
 					}
 				}
 				&.flagged{
@@ -440,7 +467,7 @@ body{
 					}
 					&:hover{
 						span{
-							color:#005689;
+							color:#D8A265;
 							text-decoration: none;
 						}
 					}
@@ -491,6 +518,9 @@ body{
 	#quoteContainer{
 		quote{
 			font-size:48px;
+			&:before{
+				left:-15px;
+			}
 		}
 	}
 	#flaggedQuestion p{
@@ -521,11 +551,26 @@ body{
 		#appHeadline{
 			padding-left:180px;
 		}
+		#appSubhead{
+			padding-left:180px;
+			padding-right:120px;
+			margin-bottom:40px;
+		}
+		#petition{
+			.chapterHeading{
+				margin-top:0;
+				border:none;
+			}
+			#petitionContainer{
+				border-top:1px solid #dfdfdf;
+			}
+		}
+
 		#petition #standfirst{
-			padding-right:440px;
+			padding-right:380px;
 		}
 		#petitionForm{
-			width:400px;
+			width:340px;
 		}
 		#petition #standfirst,.paragraphs{
 			p:first-child{
@@ -538,9 +583,6 @@ body{
 		}
 		#quoteContainer{
 			quote{
-				&:before{
-					left:-20px;
-				}
 			}
 		}
 	}
@@ -550,6 +592,10 @@ body{
 	.guInteractive{
 		#appHeadline{
 			padding-left:260px;
+		}
+		#appSubhead{
+			padding-left:260px;
+			padding-right:180px;
 		}
 		.chapterHeading{
 			width:220px;
