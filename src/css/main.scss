@@ -398,6 +398,8 @@ body{
 			height:400px;
 			overflow: hidden;
 			border:none;
+			margin:0;
+			max-width:740px;
 		}
 		#iframeContainer{
 			position: absolute;
@@ -600,6 +602,11 @@ body{
 				font-size:18px;
 			}
 		}
+		#ticker{
+			.wrapper{
+				margin:0 auto;
+			}
+		}
 		
 	}
 }
@@ -687,6 +694,11 @@ body{
 		font-size:20px;
 		line-height:1.3em;
 	}
+	#ticker{
+		.wrapper{
+			max-width:980px;
+		}
+	}
 }
 }
 
@@ -753,6 +765,11 @@ body{
 		#noteContents{
 			padding-right:380px;
 		}
+		#ticker{
+			.wrapper{
+				max-width:1140px;
+			}
+		}
 	}
 }
 
@@ -793,6 +810,11 @@ body{
 		}
 		#flaggedQuestion{
 			min-height:410px;
+		}
+		#ticker{
+			.wrapper{
+				max-width:1300px;
+			}
 		}
 	}
 }

@@ -31,7 +31,6 @@ define([
     var tickerId = "";
 
     function init(el, context, config, mediator) {
-        console.log('started loading');
         var currenturl = document.location.href;
         if(currenturl.indexOf('campaign=')>-1){
             var value = currenturl.split('campaign=')[1];
@@ -40,7 +39,6 @@ define([
         $.ajax({
             url: 'http://interactive.guim.co.uk/spreadsheetdata/1ksoSBOclYmbSWCX8YbNBsnfyNBD22SVg72Ktrq4PJaA.json',
             success: function(response){
-                console.log('success');
                 for(var key in response.sheets){
                     var newSheet = response.sheets[key].map(function(row){
                         if(row.text){
@@ -70,8 +68,7 @@ define([
                 renderPage(el);
             },
             error:function(err){
-                console.log('oops');
-                console.log(err);
+                // console.log('data not loading',err);
             }
         })
     }
