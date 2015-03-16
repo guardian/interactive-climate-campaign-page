@@ -19,13 +19,30 @@ body{
 	*{
 		box-sizing:border-box;
 	}
+	a{
+		color:inherit;
+		text-shadow:none !important;
+		background:none !important;
+		&:hover{
+			opacity:0.8;
+		}
+	}
+	iframe{
+		border:none;
+	}
 	#appHeader{
 		overflow:hidden;
 	}
+	#headerBackgroundHolder{
+		display:none;
+	}
 	#headerImage{
 		width:100%;
+		max-width:1500px;
 		height:90px;
-		margin-bottom:60px;
+		display:block;
+		margin:0 auto 60px;
+		// margin-bottom:60px;
 	}
 	#logoContainer{
 		top:0;
@@ -37,13 +54,13 @@ body{
 		}
 	}
 	#appLogo{
-		width:78px;
-		height:115px;
+		width:90px;
+		height:135px;
 		background-image:url('@@assetPath@@/imgs/logo.png');
 		background-repeat:no-repeat;
 		background-size:100%;
 		top:10px;
-		right:0;
+		left:0;
 		position: absolute !important;
 	}
 	#appHeadline{
@@ -52,20 +69,20 @@ body{
 		font-size:38px;
 		font-weight:100;
 		padding-bottom:0;
+		line-height:1em;
 	}
 	#appSubhead{
 		font-size:24px;
 		line-height:1.1em;
 	}
 	#chapters{
-		padding-bottom:40px;
+		// padding-bottom:40px;
 	}
 	.chapter{
 		position: relative;
-		margin-top:20px;
 	}
 	.wrapper{
-		padding:0 0 30px;
+		padding:0 0 50px;
 		background:#fff;
 	}
 
@@ -83,6 +100,7 @@ body{
 	}
 	p{
 		line-height:1.3em;
+		margin:1em 0;
 	}
 
 	.externalLink{
@@ -125,7 +143,7 @@ body{
 		height:auto;
 		margin-top:0;
 		.chapterHeading{
-			color:#D8A265;
+			color:#ff9b0b;
 			margin-bottom:0.4em;
 			margin-top:10px;
 			padding-top:5px;
@@ -145,6 +163,10 @@ body{
 		}
 		#formContainer{
 			width:100%;
+			iframe{
+				height:460px;
+				border:none;
+			}
 		}
 		#petitionDisclaimer{
 			font-size:12px;
@@ -158,8 +180,8 @@ body{
 		#petitionShare{
 			font-family:'Guardian Text Sans Web';
 			font-size:12px;
-			font-weight: bold;
-			color:#333;
+			font-weight: normal;
+			color:#767676;
 			p{
 				width:165px;
 				float:left;
@@ -208,13 +230,14 @@ body{
 			#flaggedQuestion{
 				h2{
 					margin-top:0;
+					line-height:1em;
 				}
 			}
 			#allFaqQuestions{
 				overflow: hidden;
 			}
 			.faqQuestion{
-				color:#D8A265;
+				color:#ff9b0b;
 				font-weight:bold;
 				cursor:pointer;
 				margin:0;
@@ -229,7 +252,7 @@ body{
 				&:hover{
 					span{
 						text-decoration: underline;
-						color:#C28846;
+						color:#e6711b;
 					}
 				}
 				&.flagged{
@@ -240,7 +263,7 @@ body{
 					}
 					&:hover{
 						span{
-							color:#D8A265;
+							color:#ff9b0b;
 							text-decoration: none;
 						}
 					}
@@ -250,7 +273,7 @@ body{
 	}
 	#explainer{
 		.wrapper{
-			// border:none;
+			border:none;
 		}
 		#videoHolder{
 			width:100%;
@@ -293,7 +316,7 @@ body{
 		padding-top:10px;
 		font-size:18px;
 		font-weight:bold;
-		color:#D8A265;
+		color:#ff9b0b;
 	}
 
 	#action{
@@ -369,9 +392,13 @@ body{
 	}
 	#ticker{
 		width:100%;
-		height:400px;
 		position: relative;
 		overflow: hidden;
+		.wrapper{
+			height:400px;
+			overflow: hidden;
+			border:none;
+		}
 		#iframeContainer{
 			position: absolute;
 			left:0;
@@ -416,11 +443,11 @@ body{
 			font-size:56px;
 		}
 		#appSubhead{
-			font-size:32px;
+			font-size:28px;
 		}
 		#headerImage{
 			height:auto;
-			margin-bottom:50px;
+			margin-bottom:60px;
 		}
 		#appLogo{
 			width:98px;
@@ -441,17 +468,16 @@ body{
 @media(min-width:660px){
 	.guInteractive{
 		.wrapper{
-			padding:0 20px 30px;
+			padding:0 20px 50px;
 		}
 		#headerImage{
 			height:200px;
 			margin-bottom:0;
-			width:105%;
 		}
 		#appLogo{
 			width:88px;
 			height:140px;
-			right:20px;
+			left:20px;
 			background-image: url(@@assetPath@@/imgs/logo_white.png);
 		}
 		#flaggedQuestion{
@@ -464,11 +490,31 @@ body{
 
 @media(min-width:740px){
 	.guInteractive{
-		#appLogo{
-			right:20px;
+		background:#efefef;
+		#petition #headerBackgroundHolder{
+			display:block;
+			padding:0;
+			z-index:1;
+			position: relative;
 		}
-		.wrapper{
-			padding:0 20px 30px;
+		#standfirst,#noteContents{
+			padding-right:240px;
+		}
+		#headerBackground{
+			position: absolute;
+			width: 100%;
+			height: 320px;
+			background: #fff;
+			z-index:1;
+		}
+		#headerImage{
+			position: relative;
+			z-index:2;
+			height:215px;
+		}
+		#appLogo{
+			left:20px;
+			width:98px;
 		}
 		.chapterHeading{
 			font-size:28px;
@@ -482,17 +528,31 @@ body{
 		}
 		#appHeadline{
 			font-size:74px;
-			margin-bottom:0.1em;
+			padding-bottom:0.1em;
+			margin-bottom:0;
 		}
 		#appSubhead{
-			font-size:36px;
+			font-size:34px;
+			padding-bottom:80px;
+			margin-bottom:0;
+		}
+		#infoForm{
+			min-height:510px;
 		}
 		#petition{
+			#petitionContainer{
+				.chapterHeading{
+					margin-top:0;
+				}
+			}
 			.chapterHeading{
 				margin-top:40px;
 			}
 			#standfirst{
 				line-height:1.5em;
+			}
+			#formContainer iframe{
+				height:510px;
 			}
 		}
 		#petitionForm{
@@ -500,7 +560,10 @@ body{
 			top:0;
 			right:0;
 			width:220px;
+			border-left:1px solid #f0f0f0;
+			padding-left:20px;
 		}
+
 		#pictureAlan{
 			display: block;
 			position: absolute;
@@ -533,6 +596,9 @@ body{
 		}
 		#flaggedQuestion{
 			min-height:420px;
+			p{
+				font-size:18px;
+			}
 		}
 		
 	}
@@ -544,10 +610,14 @@ body{
 @media(min-width:980px){
 .guInteractive{
 	#headerImage{
-		height:auto;
+		height:230px;
 	}
 	#appLogo{
-		width:88px;
+		width:105px;
+		height:150px;
+	}
+	#appSubhead{
+		padding-right:50px;
 	}
 	.chapterHeading{
 		padding-top:20px;
@@ -556,17 +626,20 @@ body{
 	#petition{
 		#standfirst{
 			font-size:20px;
-			padding-right:380px;
+			padding-right:420px;
 		}
 	}
 	#petitionForm{
-		width:360px;
+		width:380px;
 	}
 	.chapterHeading{
 		font-size:34px;
 	}
 	#note #noteContents p{
 		font-size:18px;
+	}
+	#petition #formContainer iframe{
+		height:470px;
 	}
 	#faq{
 		#faqContainer{
@@ -621,6 +694,12 @@ body{
 	.guInteractive{
 		#headerImage{
 			width:100%;
+			height:260px;
+		}
+		#appLogo{
+			width:115px;
+			height:170px;
+			left:20px;
 		}
 		.chapterHeading{
 			width:140px;
@@ -643,8 +722,7 @@ body{
 		}
 		#appSubhead{
 			padding-left:180px;
-			padding-right:120px;
-			margin-bottom:40px;
+			padding-right:300px;
 		}
 		#petition{
 			.chapterHeading{
@@ -672,24 +750,31 @@ body{
 			width:220px;
 			left:0;
 		}
+		#noteContents{
+			padding-right:380px;
+		}
 	}
 }
 
 @media(min-width:1300px){
 	.guInteractive{
+		#headerImage{
+			height:290px;
+		}
 		#appLogo{
-			width:98px;
+			width:125px;
+			height:180px;
+			left:20px;
 		}
 		#appHeadline{
 			padding-left:260px;
 		}
 		#appSubhead{
 			padding-left:260px;
-			padding-right:180px;
 		}
 		.chapterHeading{
 			width:220px;
-			font-size:28px;
+			font-size:24px;
 		}
 		.chapterContent{
 			padding-left:240px;

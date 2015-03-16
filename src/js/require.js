@@ -19,7 +19,8 @@ require.config({
     "Markdown.Converter": "../../bower_components/requirejs-plugins/lib/Markdown.Converter",
     text: "../../bower_components/text/text",
     jquery: "../../bower_components/jquery/dist/jquery",
-    rvc: "../../bower_components/rvc/rvc"
+    rvc: "../../bower_components/rvc/rvc",
+    "jQuery.XDomainRequest": "../../bower_components/jQuery.XDomainRequest/jquery.xdomainrequest.min"
   },
   packages: [
 

@@ -10,7 +10,7 @@
   "license": "Apache 2.0",
   "config": {
     "port": 9000,
-    "s3_folder": "visuals-blank-page/climate-change-campaign/"
+    "s3_folder": "2015/03/climate-change-campaign/"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

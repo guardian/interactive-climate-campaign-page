@@ -11,6 +11,7 @@ define([
     'text!./templates/chapters/actionTemplate.html',
     'text!./templates/chapters/updatesTemplate.html',
     './ractive-events-tap.js',
+    'jQuery.XDomainRequest'
 ], function(
     Ractive,
     $,
@@ -30,6 +31,7 @@ define([
     var tickerId = "";
 
     function init(el, context, config, mediator) {
+        console.log('started loading');
         var currenturl = document.location.href;
         if(currenturl.indexOf('campaign=')>-1){
             var value = currenturl.split('campaign=')[1];
@@ -38,6 +40,7 @@ define([
         $.ajax({
             url: 'http://interactive.guim.co.uk/spreadsheetdata/1ksoSBOclYmbSWCX8YbNBsnfyNBD22SVg72Ktrq4PJaA.json',
             success: function(response){
+                console.log('success');
                 for(var key in response.sheets){
                     var newSheet = response.sheets[key].map(function(row){
                         if(row.text){
@@ -65,6 +68,10 @@ define([
                 data = response.sheets;
                 data.tickerId = tickerId;
                 renderPage(el);
+            },
+            error:function(err){
+                console.log('oops');
+                console.log(err);
             }
         })
     }
@@ -116,15 +123,15 @@ define([
         var twitterBaseUrl = "http://twitter.com/share?text=";
         var facebookBaseUrl = "https://www.facebook.com/dialog/feed?display=popup&app_id=741666719251986&link=";
         
-        var articleUrl = "http://theguardian.com"
+        var articleUrl = "http://theguardian.com/keep-it-in-the-ground"
         var urlsuffix = url ? url : "";
         var shareUrl = articleUrl + urlsuffix;
 
-        var fallbackMessage = "hhehrthert";
+        var fallbackMessage = "Keep it in the ground: Guardian climate change campaign";
         message = message ? message : fallbackMessage;
         
         var shareImagePath = "@@assetPath@@/imgs/";
-        var shareImage = image ? shareImagePath + image : shareImagePath + 'header.jpg'
+        var shareImage = image ? shareImagePath + image : shareImagePath + 'logo.png'
          
         if(platform === "twitter"){
             shareWindow = 

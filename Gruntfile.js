@@ -186,7 +186,7 @@ module.exports = function(grunt) {
             maxOperations: 20,
             dryRun: (grunt.option('test')) ? true : false,
             headers: {
-                CacheControl: 180,
+                CacheControl: 60,
             },
             gzip: true,
             gzipExclude: ['.jpg', '.gif', '.jpeg', '.png']

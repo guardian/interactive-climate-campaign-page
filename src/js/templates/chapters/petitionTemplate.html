@@ -1,14 +1,17 @@
 {{#with petition[0]}}
 	<section class="chapter" id="petition">
 		<div id="appHeader">
-			<img id="headerImage" src="@@assetPath@@/imgs/header.png" />
+			<div class="wrapper" id="headerBackgroundHolder">
+				<div id="headerBackground"></div>
+			</div>
+			<img id="headerImage" src="@@assetPath@@/imgs/header2.png" />
 			<div id="logoContainer">
 				<div class="wrapper">
 					<div id="appLogo"></div>
 				</div>
 			</div>
-			<h1 id="appHeadline" class="wrapper">Invest in a better future.</h1>
-			<h2 id="appSubhead" class="wrapper">Join us in urging organisations to divest from fossil fuels</h1>
+			<h1 id="appHeadline" class="wrapper">Keep it in the ground</h1>
+			<h2 id="appSubhead" class="wrapper">Join us in urging the world's two biggest charitable funds to move their money out of fossil fuels</h1>
 		</div>
 		
 		<div class="wrapper" id="petitionContainer">
@@ -20,7 +23,7 @@
 						{{#each text}}
 						<p>{{{this}}}</p>
 						{{/each}}
-						<p id="petitionDisclaimer">{{note}}</p>
+						<!-- <p id="petitionDisclaimer">{{note}}</p> -->
 						
 					</div>
 					
