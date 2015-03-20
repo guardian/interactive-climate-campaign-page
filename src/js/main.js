@@ -31,6 +31,7 @@ define([
     var tickerId = "";
 
     function init(el, context, config, mediator) {
+        resetMobile();
         var currenturl = document.location.href;
         if(currenturl.indexOf('campaign=')>-1){
             var value = currenturl.split('campaign=')[1];
@@ -65,7 +66,27 @@ define([
                 })
                 data = response.sheets;
                 data.tickerId = tickerId;
-                renderPage(el);
+                
+                $.ajax({
+                    type:'GET',
+                    dataType:'jsonp',
+                    url:'http://act.350.org/progress/?page=guardian',
+                    timeout:2000,
+                    error:function(err){
+                        data.petitionAmount = "";
+                    },
+                    success:function(resp){
+                        var remaining = resp.total.actions % 1000;
+                        var rounded = resp.total.actions - remaining;
+                        data.petitionAmount = (rounded/1000)
+                            .toFixed(3)
+                            .toString()
+                            .replace('.',',');
+                    },
+                    complete:function(){
+                        renderPage(el);
+                    }
+                })
             },
             error:function(err){
                 // console.log('data not loading',err);
@@ -121,10 +142,11 @@ define([
         var facebookBaseUrl = "https://www.facebook.com/dialog/feed?display=popup&app_id=741666719251986&link=";
         
         var articleUrl = "http://theguardian.com/keep-it-in-the-ground"
+        var facebookUrl = "http://www.theguardian.com/environment/ng-interactive/2015/mar/16/keep-it-in-the-ground-guardian-climate-change-campaign";
         var urlsuffix = url ? url : "";
         var shareUrl = articleUrl + urlsuffix;
 
-        var fallbackMessage = "Keep it in the ground: Guardian climate change campaign";
+        var fallbackMessage = "Keep it in the ground: Guardian climate change campaign pic.twitter.com/GBU5LKb4yY";
         message = message ? message : fallbackMessage;
         
         var shareImagePath = "@@assetPath@@/imgs/";
@@ -139,7 +161,7 @@ define([
         }else if(platform === "facebook"){
             shareWindow = 
                 facebookBaseUrl + 
-                encodeURIComponent(shareUrl) + 
+                encodeURIComponent(facebookUrl) + 
                 "&picture=" + 
                 encodeURIComponent(shareImage) + 
                 "&redirect_uri=http://www.theguardian.com";
@@ -152,6 +174,9 @@ define([
         window.open(shareWindow, platform + "share", "width=640,height=320");
     }
 
+    function resetMobile(){
+        $('#standard-article-container').addClass('interactiveStyling');
+    }
     return {
         init: init
     };

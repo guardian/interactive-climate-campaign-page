@@ -1,22 +1,23 @@
 <section class="chapter" id="updates">
 	<div class="wrapper">	
-		<h2 class="chapterHeading ">Campaign updates</h2>
+		<h2 class="chapterHeading ">Latest on the campaign</h2>
 		<div class="chapterContent">
 			<div id="updateArticles" class="m-col-large">
 				{{#updates}}
 					<div class="articleBlock">
 						<div class="articleContainer">
 							<div class="articleImage">
-								<img src="http://placehold.it/300x200" />
+								<img src="{{img}}" alt="{{headline}}"/>
 							</div>
 							<div class="articleText">
 								<p>{{headline}}</p>
 							</div>
 						</div>
+						<a href="{{url}}" class="articleLayover"></a>
 					</div>
 				{{/updates}}
 			</div>
-			<a href="#" class="externalLink" id="updateExternal">More updates on the campaign blog</a>
+			<a href="http://www.theguardian.com/environment/keep-it-in-the-ground-blog" class="externalLink" id="updateExternal">More on the campaign</a>
 		</div>
 			<!-- <h2 class="chapterHeading">More information</h2>
 			<p class="moreInfo">{{info[0].text}}</p>

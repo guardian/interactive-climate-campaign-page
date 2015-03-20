@@ -12,9 +12,22 @@
 body{
 	
 }
+.interactiveStyling{
+	#article-header{
+		display:none;
+	}
+	#article-body{
+		padding:0;
+	}
+	.guInteractive{
+		footer{
+			display:none;
+		}
+	}
+}
 .guInteractive {
 	color:#333;
-	font-family:"Guardian Egyptian Web", Arial;
+	font-family:"Guardian Egyptian Web","Egyptian Display",Georgia, serif;
 	-webkit-font-smoothing:antialiased;
 	*{
 		box-sizing:border-box;
@@ -74,6 +87,9 @@ body{
 	#appSubhead{
 		font-size:24px;
 		line-height:1.1em;
+		#petitionCount{
+			color:#ff9b0b;
+		}
 	}
 	#chapters{
 		// padding-bottom:40px;
@@ -170,7 +186,7 @@ body{
 		}
 		#petitionDisclaimer{
 			font-size:12px;
-			font-family:'Guardian Text Sans Web';
+			font-family:'Guardian Text Sans Web','Agate Sans',sans-serif;
 			line-height:1.2em;
 			opacity:0.8;
 			margin-top:5px;
@@ -178,7 +194,7 @@ body{
 			color:#999;
 		}
 		#petitionShare{
-			font-family:'Guardian Text Sans Web';
+			font-family:'Guardian Text Sans Web','Agate Sans',sans-serif;
 			font-size:12px;
 			font-weight: normal;
 			color:#767676;
@@ -197,10 +213,12 @@ body{
 
 	#note{
 		background:#C8C5C2;
+		
 		color:#fff;
 		.wrapper{
 			background:transparent;
 			border:none;
+			background:#C8C5C2;
 		}
 		#noteContents{
 			p{
@@ -336,7 +354,7 @@ body{
 			}
 			.actionSubtitle{
 				color:#fff;
-				font-family:'Guardian Text Sans Web';
+				font-family:'Guardian Text Sans Web','Agate Sans',sans-serif;
 				text-transform: uppercase;
 				font-size:14px;
 				display: inline-block;
@@ -350,7 +368,7 @@ body{
 				border:1px solid #eee;
 				height:34px;
 				padding:0 15px;
-				font-family:'Guardian Text Sans Web';
+				font-family:'Guardian Text Sans Web','Agate Sans',sans-serif;
 				border-radius:17px;
 				color:#eee;
 				font-size:14px;
@@ -378,7 +396,7 @@ body{
 			margin-bottom:40px;
 		}
 		.moreInfo{
-			font-family:'Guardian Text Sans Web';
+			font-family:'Guardian Text Sans Web','Agate Sans',sans-serif;
 			color:#767676;
 			line-height:1.3em;
 			font-size:14px;
@@ -521,12 +539,13 @@ body{
 		.chapterHeading{
 			font-size:28px;
 		}
-		.externalLink{
+		#note .externalLink{
 			position: absolute;
-			top:0;
+			top:10px;
 			right:0;
 			width:220px;
 			margin-top:10px;
+			line-height: 1.2em;
 		}
 		#appHeadline{
 			font-size:74px;
@@ -574,6 +593,7 @@ body{
 			width:240px;
 		}
 		#note{
+			background:#BEBAB7;
 			#noteContents p{
 				font-size:18px;
 			}
@@ -616,6 +636,14 @@ body{
 
 @media(min-width:980px){
 .guInteractive{
+	.externalLink{
+		position: absolute;
+		top:10px;
+		right:0;
+		width:220px;
+		margin-top:10px;
+		line-height: 1.2em;
+	}
 	#headerImage{
 		height:230px;
 	}

@@ -11,6 +11,15 @@
 		width:100%;
 		margin-bottom:10px;
 		cursor:pointer;
+		position: relative;
+	}
+	.articleLayover{
+		position: absolute;
+		left:0;
+		right:0;
+		top:0;
+		bottom:0;
+		z-index:2;
 	}
 
 	.articleBlock:hover{
@@ -33,6 +42,8 @@
 		padding-bottom:10px;
 		padding-top:4px;
 		border-top:1px solid #4BC6DF;
+		position: relative;
+		z-index:1;
 		&:after{
 			clear:both;
 			content:'';
