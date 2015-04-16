@@ -69,15 +69,15 @@ define([
                 
                 $.ajax({
                     type:'GET',
-                    dataType:'jsonp',
-                    url:'http://act.350.org/progress/?page=guardian',
+                    dataType:'json',
+                    url:'http://350dotorg.github.io/megamap-data/count-all-guardian-petition-signers-including-translations.json',
                     timeout:2000,
                     error:function(err){
                         data.petitionAmount = "";
                     },
                     success:function(resp){
-                        var remaining = resp.total.actions % 1000;
-                        var rounded = resp.total.actions - remaining;
+                        var remaining = resp.count % 1000;
+                        var rounded = resp.count - remaining;
                         data.petitionAmount = (rounded/1000)
                             .toFixed(3)
                             .toString()
