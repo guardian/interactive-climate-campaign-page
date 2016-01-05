@@ -1,0 +1,209 @@
+
+/******************
+ 350 FORM OVERRIDES 
+*******************/
+
+html * { 
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+#partnership-header {
+	display: inline-block;
+	width: 100%;
+	margin: 4px 0 12px 0;
+}
+
+#partnership-headline {
+	float: left;
+	font-family: "TS3TextSans", "Guardian Text Sans Web", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	color: #333;
+	font-weight: 400;
+	margin: 0;
+	padding: 4px 6px 0 0;
+}
+
+#partnership-header a {
+	border: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	-webkit-text-shadow: none;
+	text-shadow: none;
+	text-align: left;
+}
+
+#partnership-img {
+	float: left;
+	width: 100%;
+	max-width: 62px;
+	padding-top: 0;
+}
+
+#gu-campaign-form {
+	width: 100%;
+	font-family: "TS3TextSans", "Guardian Text Sans Web", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	overflow: hidden;
+	margin-bottom: 0px !important;
+}
+
+#gu-campaign-form label {
+	color: #de4947;
+	display: block;
+	margin-bottom: 6px;
+	font-size: 12px;
+}
+
+#gu-campaign-form #partner-share,
+#gu-campaign-form #threefifty-share {
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 0px;
+}
+
+#gu-campaign-form #threefifty-share {
+	margin-bottom: 12px;
+}
+
+#gu-campaign-form #partner-share label,
+#gu-campaign-form #threefifty-share label {
+	color: #767676;
+	display: inline;
+}
+
+#gu-campaign-form input[type="text"],
+#gu-campaign-form input[type="submit"] {
+	-webkit-appearance: none;
+	appearance: none;
+	margin-bottom: 12px;
+}
+
+#gu-campaign-form input[type="text"],
+#gu-campaign-form input[type="submit"],
+#gu-campaign-form select {
+	width: 100%;
+	height: 32px;
+	border-radius: 5px;
+}
+
+#gu-campaign-form input[type="text"] {
+	border: 1px solid #bdbdbd;
+}
+
+#gu-campaign-form select {
+	-webkit-appearance: menulist-button;
+	appearance: menulist-button;
+	margin-bottom: 12px;
+	cursor: pointer;
+}
+
+#gu-campaign-form input[type="submit"] {
+	background-color: #de4947;
+	border: 1px solid #de4947;
+	border-radius: 1000px;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+	max-width: 138px;
+	height: 34px;
+	cursor: pointer;
+}
+
+
+/**************
+ Thank you page 
+***************/
+
+#signup-replacement p {
+	color: #C8C5C2;
+	font-family: 'DE5DisplayEgyptianSemiBold', 'Guardian Text Egyptian Web', Georgia, serif;
+	font-size: 30px;
+	font-weight: 900;
+	margin: 0;
+}
+
+#signup-replacement p.em {
+	color: #de4947;
+	margin-bottom: 12px;
+}
+
+#signup-replacement .share-buttons {
+	box-sizing: border-box;
+	color: rgb(118, 118, 118);
+	font-kerning: normal;
+	font-variant-ligatures: common-ligatures;
+	height: 30px;
+	text-rendering: optimizelegibility;
+	width: 940px;
+	perspective-origin: 470px 15px;
+	transform-origin: 470px 15px;
+	border: 0px none rgb(118, 118, 118);
+	font: normal normal normal normal 0px/0px 'Guardian Text Sans Web', 'Agate Sans', sans-serif;
+	outline: rgb(118, 118, 118) none 0px;
+}
+
+#signup-replacement .share-facebook {
+	background-position: 50% 50%;
+	color: rgb(118, 118, 118);
+	cursor: pointer;
+	font-kerning: normal;
+	font-variant-ligatures: common-ligatures;
+	height: 30px;
+	min-height: 0px;
+	text-rendering: optimizelegibility;
+	width: 30px;
+	perspective-origin: 15px 15px;
+	transform-origin: 15px 15px;
+	background: rgb(48, 103, 163) url(http://interactive.guim.co.uk/2015/03/climate-change-campaign/assets-1426515107823/imgs/facebook.svg) no-repeat scroll 50% 50% / 28px padding-box border-box;
+	border: 0px none rgb(118, 118, 118);
+	border-radius: 34px 34px 34px 34px;
+	font: normal normal normal normal 0px/0px 'Guardian Text Sans Web', 'Agate Sans', sans-serif;
+	margin: 0px 2px;
+	outline: rgb(118, 118, 118) none 0px;
+}
+
+#signup-replacement .share-twitter {
+	background-position: 50% 50%;
+	color: rgb(118, 118, 118);
+	cursor: pointer;
+	font-kerning: normal;
+	font-variant-ligatures: common-ligatures;
+	height: 30px;
+	min-height: 0px;
+	text-rendering: optimizelegibility;
+	width: 30px;
+	perspective-origin: 15px 15px;
+	transform-origin: 15px 15px;
+	background: rgb(3, 179, 238) url(http://interactive.guim.co.uk/2015/03/climate-change-campaign/assets-1426515107823/imgs/twitter.svg) no-repeat scroll 50% 50% / 28px 	padding-box border-box;
+	border: 0px none rgb(118, 118, 118);
+	border-radius: 34px 34px 34px 34px;
+	font: normal normal normal normal 0px/0px 'Guardian Text Sans Web', 'Agate Sans', sans-serif;
+	margin: 0px 2px;
+	outline: rgb(118, 118, 118) none 0px;
+}
+
+#signup-replacement .share-email {
+	background-position: 50% 50%;
+	color: rgb(118, 118, 118);
+	cursor: pointer;
+	font-kerning: normal;
+	font-variant-ligatures: common-ligatures;
+	height: 30px;
+	min-height: 0px;
+	text-rendering: optimizelegibility;
+	width: 30px;
+	perspective-origin: 15px 15px;
+	transform-origin: 15px 15px;
+	background: rgb(118, 118, 118) url(http://interactive.guim.co.uk/2015/03/climate-change-campaign/assets-1426515107823/imgs/mail.svg) no-repeat scroll 50% 50% / 28px 	padding-box border-box;
+	border: 0px none rgb(118, 118, 118);
+	border-radius: 34px 34px 34px 34px;
+	font: normal normal normal normal 0px/0px 'Guardian Text Sans Web', 'Agate Sans', sans-serif;
+	margin: 0px 2px;
+	outline: rgb(118, 118, 118) none 0px;
+}
+
+
+

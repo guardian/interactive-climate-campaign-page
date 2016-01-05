@@ -8,6 +8,7 @@
 @import 'modules/fonts';
 @import 'modules/furniture';
 @import 'modules/share';
+
 body{
 	
 }
@@ -87,7 +88,7 @@ body{
 		font-size:24px;
 		line-height:1.1em;
 		#petitionCount{
-			color:#ff9b0b;
+			color:#de4947;
 		}
 	}
 	#chapters{
@@ -158,7 +159,7 @@ body{
 		height:auto;
 		margin-top:0;
 		.chapterHeading{
-			color:#ff9b0b;
+			color:#de4947;
 			margin-bottom:0.4em;
 			margin-top:10px;
 			padding-top:5px;
@@ -254,7 +255,7 @@ body{
 				overflow: hidden;
 			}
 			.faqQuestion{
-				color:#ff9b0b;
+				color:#de4947;
 				font-weight:bold;
 				cursor:pointer;
 				margin:0;
@@ -280,7 +281,7 @@ body{
 					}
 					&:hover{
 						span{
-							color:#ff9b0b;
+							color:#de4947;
 							text-decoration: none;
 						}
 					}
@@ -333,7 +334,7 @@ body{
 		padding-top:10px;
 		font-size:18px;
 		font-weight:bold;
-		color:#ff9b0b;
+		color:#de4947;
 	}
 
 	#action{
