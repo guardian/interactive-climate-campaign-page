@@ -20,7 +20,8 @@ require.config({
     text: "../../bower_components/text/text",
     jquery: "../../bower_components/jquery/dist/jquery",
     rvc: "../../bower_components/rvc/rvc",
-    "jQuery.XDomainRequest": "../../bower_components/jQuery.XDomainRequest/jquery.xdomainrequest.min"
+    "jQuery.XDomainRequest": "../../bower_components/jQuery.XDomainRequest/jquery.xdomainrequest.min",
+    "jQuery-ajaxTransport-XDomainRequest": "../../bower_components/jQuery-ajaxTransport-XDomainRequest/jquery.xdomainrequest.min"
   },
   packages: [
 
