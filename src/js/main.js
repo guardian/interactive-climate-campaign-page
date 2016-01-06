@@ -38,8 +38,9 @@ define([
             tickerId = value.split(/#|&/)[0];
         }
         $.ajax({
-            url: 'http://interactive.guim.co.uk/spreadsheetdata/1ksoSBOclYmbSWCX8YbNBsnfyNBD22SVg72Ktrq4PJaA.json',
+            url: 'https://interactive.guim.co.uk/docsdata-test/1MPqC3c6l8wEYWZMBNOx2vKLUz09WAQk5Ml2P03zdMr0.json',
             success: function(response){
+                console.log(response)
                 for(var key in response.sheets){
                     var newSheet = response.sheets[key].map(function(row){
                         if(row.text){
@@ -84,7 +85,8 @@ define([
                             .replace('.',',');
                     },
                     complete:function(){
-                        renderPage(el);
+                        renderPage(el);  
+                        console.log(data.petitionString)                      
                     }
                 })
             },
@@ -120,6 +122,7 @@ define([
                 chapterUpdates:chapterUpdates
             },
             data:data
+
         })
 
         app.on('chapterExplainer.flagQuestion',function(e){
@@ -173,6 +176,8 @@ define([
         }
         window.open(shareWindow, platform + "share", "width=640,height=320");
     }
+
+  
 
     function resetMobile(){
         $('#standard-article-container').addClass('interactiveStyling');
