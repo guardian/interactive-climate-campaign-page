@@ -42,12 +42,28 @@ body{
 	iframe{
 		border:none;
 	}
+
+	h2 {
+		margin:0px;
+	}
 	#appHeader{
 		overflow:hidden;
-		background:#4ac4d8;
+		background:#57c3bc;
+		height:168px;
+		padding-top: 12px;
+		@media(min-width:300px){
+			height:300px;
+		}
+		@media(min-width:740px){
+			height:480px;
+		}
 	}
 	#headerBackgroundHolder{
 		display:none;
+	}
+
+	#headerBackground{
+			background: #6ad0cb;
 	}
 	#headerImage{
 		width:100%;
@@ -76,23 +92,17 @@ body{
 		left:0;
 		position: absolute !important;
 	}
-	#appHeadline{
-		margin-top:0;
-		margin-bottom:0;
-		font-size:36px;
-		line-height: 40px;
-		font-weight:100;
-		padding-bottom:0.2em;
-		line-height:1em;
-		background: #57c3bc;
-	}
+	
 	#appSubhead{
 		font-size:24px;
 		line-height:1.1em;
 		background: #57c3bc;
+		color: #FFF;
+		margin-bottom:12px;
 		#petitionCount{
 			color:#faba14;
 		}
+	
 	}
 	#chapters{
 		// padding-bottom:40px;
@@ -102,9 +112,22 @@ body{
 	}
 	.wrapper{
 		padding:0 0 50px;
-		background:#fff;
+		
 	}
 
+	.global-bg-color{
+		padding:0;
+
+		h2{
+			width:320px; color:white; font-size:1.25em;
+		}
+		
+	}
+
+	.global-grid-unit{
+		background:#FFF;
+		display:inline-block;
+	}	
 	.chapterHeading{
 		padding-top:10px;
 		font-size:24px;
@@ -183,7 +206,7 @@ body{
 		#formContainer{
 			width:100%;
 			iframe{
-				height:490px;
+				height:240px;
 				border:none;
 			}
 		}
@@ -197,6 +220,7 @@ body{
 			color:#999;
 		}
 		#petitionShare{
+			padding-bottom:36px;
 			font-family:'Guardian Text Sans Web','Agate Sans',sans-serif;
 			font-size:12px;
 			font-weight: normal;
@@ -440,10 +464,26 @@ body{
 		}
 	}
 
+	.wrapperAuto{
+		width:0;
+		margin: 0 auto 0 auto;
+		background-color: #194377;
+	}
+
 }
 
 
-
+#petition{
+			.chapterHeading{
+				margin-top:0;
+				border:none;
+				padding-top:0;
+			}
+			#petitionContainer{
+				border-top:1px solid #dfdfdf;
+				background:#fff;
+			}
+		}
 
 
 @media(min-width:480px){
@@ -463,10 +503,10 @@ body{
 			}
 		}
 		#appHeadline{
-			font-size:56px;
+			font-size:2.5em;
 		}
 		#appSubhead{
-			font-size:28px;
+			font-size:1em;
 		}
 		#headerImage{
 			height:auto;
@@ -491,7 +531,7 @@ body{
 @media(min-width:660px){
 	.guInteractive{
 		.wrapper{
-			padding:0 20px 50px;
+			padding:0 20px;
 		}
 		#headerImage{
 			height:200px;
@@ -506,6 +546,7 @@ body{
 		#flaggedQuestion{
 			min-height:320px;
 		}
+
 	}
 }
 
@@ -526,8 +567,7 @@ body{
 		#headerBackground{
 			position: absolute;
 			width: 100%;
-			height: 320px;
-			background: #fff;
+			// height: 320px;
 			z-index:1;
 		}
 		#headerImage{
@@ -550,15 +590,16 @@ body{
 			margin-top:10px;
 			line-height: 1.2em;
 		}
-		#appHeadline{
-			font-size:44px;
-			line-height:48px;
+		#appHeadline, #appHeadlineStackEven{
+			font-size:5em;
+			line-height:1em;
 			padding-bottom:0.1em;
 			margin-bottom:0;
+			width:480px
 		}
 		#appSubhead{
 			font-size:34px;
-			padding-bottom:80px;
+			padding-bottom:12px;
 			margin-bottom:0;
 		}
 		#infoForm{
@@ -761,23 +802,12 @@ body{
 		.externalLink{
 			top:15px;
 		}
-		#appHeadline{
-			padding-left:180px;
-		}
+		
 		#appSubhead{
 			padding-left:180px;
 			padding-right:300px;
 		}
-		#petition{
-			.chapterHeading{
-				margin-top:0;
-				border:none;
-				padding-top:0;
-			}
-			#petitionContainer{
-				border-top:1px solid #dfdfdf;
-			}
-		}
+		
 
 		#petition #standfirst{
 			padding-right:380px;
@@ -805,6 +835,43 @@ body{
 	}
 }
 
+	#appHeadline, #appHeadlineStackEven{
+		padding-left:10px;
+		margin: 12px 0 0 -10px;
+		font-size:3em;
+		line-height: 1em;
+		font-weight:100;
+		padding-bottom:0.2em;
+		line-height:1em;
+		background: #194377;
+		color: #FFF;
+		height:57px;
+		padding-top:3px;
+			@media(min-width:740px){
+				margin: 12px 0 0 -20px;
+				padding-left:20px;
+				height:77px;
+				padding-top:3px;
+			}
+	}
+
+
+
+	#appHeadline, #appHeadlineStackEven{
+		width:300px;
+	}
+	#appHeadlineStackEven{
+		margin-left:80px !important;
+		background: #FFF;
+		color:#000;
+		
+		
+		text-align:left;
+	}
+
+	
+
+
 @media(min-width:1300px){
 	.guInteractive{
 		#headerImage{
@@ -815,11 +882,11 @@ body{
 			height:180px;
 			left:20px;
 		}
-		#appHeadline{
-			padding-left:260px;
-		}
+		
 		#appSubhead{
-			padding-left:260px;
+			padding-left:20px;
+			font-size:20px;
+			line-height: 24px;
 		}
 		.chapterHeading{
 			width:220px;
