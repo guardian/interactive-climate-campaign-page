@@ -622,12 +622,20 @@ body{
 			}
 		}
 		#petitionForm{
-			position: absolute;
-			top:0;
-			right:0;
-			width:220px;
-			border-left:1px solid #f0f0f0;
-			padding-left:20px;
+			position: relative;
+			
+			width:100%;
+			max-width: 680px;
+			border:none;
+			padding-left:0;
+
+			@media(min-width:960px){
+				position: absolute;
+				top:0;
+				right:0;
+				
+				padding-left:20px;
+			}
 		}
 
 		#pictureAlan{
