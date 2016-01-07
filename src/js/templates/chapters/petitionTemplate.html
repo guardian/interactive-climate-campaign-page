@@ -1,38 +1,24 @@
 {{#with petition[0]}}
+
+
 	<section class="chapter" id="petition">
-		<div id="appHeader">
-			<div class="wrapper" id="headerBackgroundHolder">
-				<div id="headerBackground"></div>
-			</div>
-			<!-- <img id="headerImage" src="@@assetPath@@/imgs/header2.png" /> -->
-			<!-- <div id="logoContainer">
-				<div class="wrapper">
-					<div id="appLogo"></div>
-				</div>
-			</div> -->
-		<div class="wrapper  global-bg-color">
-				<h2>Join us and <span id="petitionCount">{{#if petitionAmount}} more than {{petitionAmount}} others{{else}}thousands of others{{/if}}</span> in urging the world's two biggest charitable funds to move their money out of fossil fuels</h2>
-		</div>
-		<div class="wrapper global-bg-color">
-			<div  class="global-bg-color">
-					<h1 id="appHeadline">
-						this is
-					</h1>
-			</div>
-		</div>	
-		<div  class="wrapper global-bg-color">
-			<h1 id="appHeadlineStackEven">
-				the NHS
-			</h1>
-		</div>
+	
 		
-			
-		</div>
 		
 		<div class="wrapper" id="petitionContainer">
-			<h2 class="chapterHeading">{{headline}}</h2>
-			<div class="chapterContent">
+
+
+
+			<!-- <h2 class="chapterHeading">{{headline}}</h2> -->
+			<div class="chapterContent" id="mainContent">
 				
+				<div id="petitionForm">
+		
+							<iframe src="https://www.theguardian.com/email/form/article/3573" height="228px" data-form-title="Sign up for our NHS email" data-form-description="Whether you have a passing interest in the subject or a fascination, have personal experience, or the experience of a family member or loved one, or are a professional, please join in." data-form-campaign-code="NHS_signup_iframe" scrolling="no" seamless="" frameborder="0" class="iframed--overflow-hidden email-sub__iframe js-email-sub__iframe js-email-sub__iframe--article" class="max-col-w"></iframe>
+					
+					</div>
+
+
 				<div id="infoForm">
 					<div id="standfirst" class="m-col-large">
 						{{#each text}}
@@ -42,11 +28,7 @@
 						
 					</div>
 					
-					<div id="petitionForm">
-		
-							<iframe src="https://www.theguardian.com/email/form/article/3573" height="218px" width="100%" data-form-title="Sign up for our NHS email" data-form-description="Whether you have a passing interest in the subject or a fascination, have personal experience, or the experience of a family member or loved one, or are a professional, please join in." data-form-campaign-code="NHS_signup_iframe" scrolling="no" seamless="" frameborder="0" class="iframed--overflow-hidden email-sub__iframe js-email-sub__iframe js-email-sub__iframe--article"></iframe>
 					
-					</div>
 					<div id="petitionShare">
 						<p>Help us by spreading the word</p>
 						<shareContainer media="['facebook','twitter','mail']"/>

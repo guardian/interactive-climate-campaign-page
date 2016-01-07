@@ -1,0 +1,162 @@
+#backtohome{
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  vertical-align:top;
+}
+#backtohome span{
+  display:inline-block;
+  padding-top:17px;
+}
+#appHeaderArea{
+  height:300px;
+  background:rgba(74,196,216,0.5);
+  width:100%;
+}
+.contentBlock{
+  margin:0 10px;
+  max-width:1300px;
+}
+
+#navContainer{
+  background:rgba(74,196,216,0.5);
+  height:100%;
+  padding-top:12px;
+}
+
+#navContainer:after{
+  clear:both;
+  content:'';
+  display:block;
+}
+
+#guardianLogo{
+  width:170px;
+  float:right;
+  margin-top:10px;
+  display:inline-block;
+}
+
+#homeLogo{
+  width:15px;
+  height:18px;
+  margin-top:14px;
+  display:inline-block;
+  margin-right:7px;
+  vertical-align:top;
+}
+
+.stack-shim{
+		display:inline;
+		width:300px;
+	}
+	.slice-title-holder{
+		display:inline;
+	} 
+
+
+
+.stack-one{
+	margin-left:20px;
+	@media(min-width:740px){
+		margin-left:140px;
+	}
+}
+
+.stack-two{
+	position:absolute;
+	top: 82px;
+	left:0px;
+
+}
+
+.stack-three{
+	margin-top:72px;
+	margin-left:60px;
+
+		@media(min-width:740px){
+				margin-left:20px;
+	}
+}
+
+.stack-one{
+	
+	h2{
+		padding:3px 20px 0; background:#8aa5b2; width:280px; color:white; font-size:1em; line-height:1.125em; height:60px;
+		@media(min-width:740px){
+			padding:6px 20px 0; background:#8aa5b2; width:380px; color:white; font-size:1.25em; line-height:1.125em; height:60px;
+		}
+		
+	}
+	
+}
+
+
+
+
+#appHeadline, #appHeadlineStackEven{
+	padding:3px 10px;
+	margin: 0 0 0 -10px;
+	width:260px;	
+	font-size:3em;
+	line-height: 1.1em;
+	font-weight:100;
+	line-height:1em;
+	background: #005689;
+	color: #FFF;
+	height:54px;
+	
+		@media(min-width:740px){
+			width:260px;
+			margin: 0 0 0 -20px;
+			height:54px;
+			font-size:3em;
+			line-height:1em;
+			padding:5px 20px 1px;
+			
+		}
+}
+
+#appHeadlineStackEven{
+	width:260px;
+	margin: 12px 0 0 -10px;
+	@media(min-width:740px){
+		width:260px;
+		margin: 12px 0 0 -20px;
+	}
+}
+
+
+
+
+
+#appHeadlineStackEven{
+	
+	background: #FFF;
+	color:#000;
+	text-align:left;
+
+	margin-left:10px !important;
+
+	@media(min-width:740px){
+		margin-left:20px !important;
+	}
+
+	@media(min-width:740px){
+		margin-left:20px !important;
+	}
+
+	@media(min-width:1140px){
+		margin-left:160px !important;
+	}
+
+	@media(min-width:1300px){
+		margin-left:220px !important;
+	}
+
+	
+}
+
+
+
+

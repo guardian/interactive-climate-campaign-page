@@ -32,6 +32,7 @@ define([
 
     function init(el, context, config, mediator) {
         resetMobile();
+        var headCount = -1;
         var currenturl = document.location.href;
         if(currenturl.indexOf('campaign=')>-1){
             var value = currenturl.split('campaign=')[1];
@@ -50,19 +51,22 @@ define([
                     });
                     response.sheets[key] = newSheet;
                 }
+
                 response.sheets.actions = response.sheets.actions.map(function(a){
+                    headCount++;
                     var splitHeadline = a.headline.split(': ');
-                    if(splitHeadline.length > 1){
-                        a.headline = {
-                            subtitle: splitHeadline[0],
-                            title: splitHeadline[1]
+                        if(splitHeadline.length > 1){
+                            a.headline = {
+                                subtitle: splitHeadline[0],
+                                title: splitHeadline[1]
+                            }
+                        }else{
+                            a.headline = {
+                                title: splitHeadline[0]
+                            }
                         }
-                    }else{
-                        a.headline = {
-                            title: splitHeadline[0]
-                        }
-                    }
-                    
+                    a.count = headCount;
+
                     return a;
                 })
                 data = response.sheets;
@@ -85,8 +89,7 @@ define([
                             .replace('.',',');
                     },
                     complete:function(){
-                        renderPage(el);  
-                        console.log(data.petitionString)                      
+                        renderPage(el);                   
                     }
                 })
             },
@@ -106,6 +109,17 @@ define([
         var chapterExplainer    = Ractive.extend({template:explainerTemplate});
         var chapterAction       = Ractive.extend({template:actionTemplate});
         var chapterUpdates      = Ractive.extend({template:updatesTemplate});
+
+        var addEvent = function(object, type, callback) {
+            if (object == null || typeof(object) == 'undefined') return;
+            if (object.addEventListener) {
+                object.addEventListener(type, callback, false);
+            } else if (object.attachEvent) {
+                object.attachEvent("on" + type, callback);
+            } else {
+                object["on"+type] = callback;
+            }
+        };
 
 
         var app = new Ractive({
@@ -136,7 +150,50 @@ define([
             window.scrollTo(0,scrollHeight);
         })
 
-        app.on('shareContainer.share',shareContent)
+        addEvent(window, "resize", checkForResize );
+
+        app.on('shareContainer.share',shareContent);
+
+        adjustLayout();
+    }
+
+    function checkForResize(){
+        adjustLayout();
+    }
+
+    function adjustLayout(){
+        var el = document.getElementById("navContainer");
+        
+        var style = window.getComputedStyle(el); 
+        var n = getCSSVal("navContainer","margin-left");
+        var nn = getCSSVal("mainContent","padding-left");
+        var nnn = getCSSVal("petitionContainer","margin-left");
+        
+        var k = parseInt(n.substring(0, n.length - 2));
+        var kk = parseInt(nn.substring(0, nn.length - 2));
+        var kkk = parseInt(nnn.substring(0, nn.length - 2));
+
+        console.log(k+kk)
+
+        adjustHeader((k+kk+kkk))
+    }
+
+    function adjustHeader(n){
+         
+         //n = n*-1;
+         
+         document.getElementById("stackTwo").style.borderLeft = n+"px solid #005689";
+         
+    }
+
+    function getCSSVal(idStr,cssVal){
+        var n;
+            var el = document.getElementById(idStr);
+            var style = window.getComputedStyle(el); 
+
+            n = style.getPropertyValue(cssVal);
+
+        return n;
     }
 
     function shareContent(e, platform, message, url, image){
