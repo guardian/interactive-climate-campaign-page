@@ -167,7 +167,7 @@ define([
         var style = window.getComputedStyle(el); 
         var n = getCSSVal("navContainer","margin-left");
         var nn = getCSSVal("mainContent","padding-left");
-        var nnn = getCSSVal("petitionContainer","margin-left");
+        var nnn = getCSSVal("petitionContainer","padding-left");
         
         var k = parseInt(n.substring(0, n.length - 2));
         var kk = parseInt(nn.substring(0, nn.length - 2));
@@ -197,20 +197,24 @@ define([
     }
 
     function shareContent(e, platform, message, url, image){
+        var shareURL = encodeURIComponent(window.guardian.config.page.shortUrl); // short url will only work in a guardian page
         var shareWindow;
         var twitterBaseUrl = "http://twitter.com/share?text=";
         var facebookBaseUrl = "https://www.facebook.com/dialog/feed?display=popup&app_id=741666719251986&link=";
         
-        var articleUrl = "http://theguardian.com/keep-it-in-the-ground"
-        var facebookUrl = "http://www.theguardian.com/environment/ng-interactive/2015/mar/16/keep-it-in-the-ground-guardian-climate-change-campaign";
+        var articleUrl = shareURL;
+        var facebookUrl = shareURL;
         var urlsuffix = url ? url : "";
         var shareUrl = articleUrl + urlsuffix;
 
-        var fallbackMessage = "Keep it in the ground: Guardian climate change campaign pic.twitter.com/GBU5LKb4yY";
+        var fallbackMessage = "The story of one of the most complex organisations in the world, told through the voices of those on the frontline #ThisIsTheNHS";
         message = message ? message : fallbackMessage;
         
         var shareImagePath = "@@assetPath@@/imgs/";
         var shareImage = image ? shareImagePath + image : shareImagePath + 'logo.png'
+
+        
+        
          
         if(platform === "twitter"){
             shareWindow = 
