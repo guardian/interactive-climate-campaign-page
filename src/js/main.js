@@ -197,7 +197,7 @@ define([
     }
 
     function shareContent(e, platform, message, url, image){
-        var shareURL = encodeURIComponent(window.guardian.config.page.shortUrl); // short url will only work in a guardian page
+        var shareURL = "http://gu.com/p/4ft63"; // short url will only work in a guardian page
         var shareWindow;
         var twitterBaseUrl = "http://twitter.com/share?text=";
         var facebookBaseUrl = "https://www.facebook.com/dialog/feed?display=popup&app_id=741666719251986&link=";
@@ -207,7 +207,7 @@ define([
         var urlsuffix = url ? url : "";
         var shareUrl = articleUrl + urlsuffix;
 
-        var fallbackMessage = "The story of one of the most complex organisations in the world, told through the voices of those on the frontline #ThisIsTheNHS";
+        var fallbackMessage = "The story of one of the most complex organisations in the world, the voices of those on the frontline #ThisIsTheNHS";
         message = message ? message : fallbackMessage;
         
         var shareImagePath = "@@assetPath@@/imgs/";
